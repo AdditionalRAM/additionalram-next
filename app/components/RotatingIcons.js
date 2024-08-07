@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import styles from './RotatingIcons.module.css';
 import gsap from 'gsap';
 
@@ -8,6 +8,9 @@ export default function RotatingIcons({ elements, centerSelector, radius, speed,
   const [centerPos, setCenterPos] = useState({ x: 0, y: 0 });
   const angleStep = (2 * Math.PI) / elements.length;
   const rotateAnimationRef = React.useRef(null);
+  const mousePos = useRef({ x: 0, y: 0 });
+
+  
 
   useEffect(() => {
     const updateCenterPosition = () => {
@@ -30,12 +33,42 @@ export default function RotatingIcons({ elements, centerSelector, radius, speed,
       ease: 'linear'
     });
 
+    const handleMouseMove = (event) => {
+      mousePos.current = {
+        x: event.clientX,
+        y: event.clientY
+      };
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+
     return () => {
       window.removeEventListener('scroll', updateCenterPosition);
       window.removeEventListener('resize', updateCenterPosition);
+      window.removeEventListener('mousemove', handleMouseMove);
       rotateAnimationRef.current.kill();
     };
   }, [centerSelector]);
+
+  const clamp = (num, min, max) => {
+    return num <= min ? min : num >= max ? max : num;
+  }
+
+  const findSmallestDistance = () => {
+    let smallestDistance = Infinity;
+    let icons = document.querySelectorAll(`.${iconClass}`);
+    icons.forEach((icon, i) => {
+      let rect = icon.getBoundingClientRect();
+      let x = rect.left + rect.width / 2;
+      let y = rect.top + rect.height / 2;
+      let distanceFromMouse = Math.sqrt((x - mousePos.current.x) ** 2 + (y - mousePos.current.y) ** 2);
+      if (distanceFromMouse < smallestDistance) {
+        smallestDistance = distanceFromMouse;
+      }
+    });
+    return smallestDistance;
+  }
 
   const update = () => {
     let parentRotation = rotateAnimationRef.current.progress() * 360;
@@ -43,6 +76,9 @@ export default function RotatingIcons({ elements, centerSelector, radius, speed,
     icons.forEach((icon, i) => {
       icon.style.transform = `translate(-50%, -50%) rotate(${-parentRotation}deg)`;
     });
+    let smallestDistance = findSmallestDistance();
+    let timeScale = clamp((smallestDistance - 30) / 70, 0, 1);
+    rotateAnimationRef.current.timeScale(timeScale);
     requestAnimationFrame(update);
   };
 
