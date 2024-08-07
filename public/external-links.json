@@ -1,0 +1,32 @@
+[
+  {
+    "name": "GitHub",
+    "link": "https://github.com/AdditionalRAM",
+    "iconURL": "/logos/logo-github.svg"
+  },
+  {
+    "name": "LinkedIn",
+    "link": "https://www.linkedin.com/",
+    "iconURL": "/logos/logo-linkedin.svg"
+  },
+  {
+    "name": "Email",
+    "link": "mailto:taha@additionalram.com",
+    "iconURL": "/logos/mail-outline.svg"
+  },
+  {
+    "name": "itch.io",
+    "link": "https://additionalram.itch.io/",
+    "iconURL": "/logos/logo-itchio.svg"
+  },
+  {
+    "name": "Instagram",
+    "link": "https://www.instagram.com/",
+    "iconURL": "/logos/logo-instagram.svg"
+  },
+  {
+    "name": "YouTube",
+    "link": "https://www.youtube.com/@additionalram",
+    "iconURL": "/logos/logo-youtube.svg"
+  }
+]
