@@ -6,7 +6,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import React, { useEffect, useRef } from 'react';
 
-export default function ThreeCRT() {
+export default function ThreeCRT({elementID}) {
   const canvasRef = useRef(null);
   const crtRef = useRef(null);
   const mousePos = useRef({ x: 0, y: 0 });
@@ -90,7 +90,7 @@ export default function ThreeCRT() {
   }, []);
 
   return (
-    <div className={styles.canvasContainer}>
+    <div className={styles.canvasContainer} id={elementID}>
       <canvas ref={canvasRef} id="bg" className={styles.canvas}></canvas>
     </div>
   );
