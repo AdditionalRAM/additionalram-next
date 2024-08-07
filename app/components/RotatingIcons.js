@@ -7,6 +7,7 @@ import gsap from 'gsap';
 export default function RotatingIcons({ elements, centerSelector, radius, speed }) {
   const [centerPos, setCenterPos] = useState({ x: 0, y: 0 });
   const angleStep = (2 * Math.PI) / elements.length;
+  const rotateAnimationRef = React.useRef(null);
 
   useEffect(() => {
     const updateCenterPosition = () => {
@@ -22,7 +23,7 @@ export default function RotatingIcons({ elements, centerSelector, radius, speed 
     window.addEventListener('scroll', updateCenterPosition);
     window.addEventListener('resize', updateCenterPosition);
 
-    const rotateAnimation = gsap.to(`.${styles.centerer}`, {
+    rotateAnimationRef.current = gsap.to(`.${styles.centerer}`, {
       rotation: 360,
       repeat: -1,
       duration: speed,
@@ -32,9 +33,20 @@ export default function RotatingIcons({ elements, centerSelector, radius, speed 
     return () => {
       window.removeEventListener('scroll', updateCenterPosition);
       window.removeEventListener('resize', updateCenterPosition);
-      rotateAnimation.kill();
+      rotateAnimationRef.current.kill();
     };
   }, [centerSelector]);
+
+  const update = () => {
+    let parentRotation = rotateAnimationRef.current.progress() * 360;
+    let icons = document.querySelectorAll(`.${styles.icon}`);
+    icons.forEach((icon, i) => {
+      icon.style.transform = `translate(-50%, -50%) rotate(${-parentRotation}deg)`;
+    });
+    requestAnimationFrame(update);
+  };
+
+  requestAnimationFrame(update);
 
   return (
     <div
