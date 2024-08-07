@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './RotatingIcons.module.css';
 import gsap from 'gsap';
 
-export default function RotatingIcons({ elements, centerSelector, radius, speed }) {
+export default function RotatingIcons({ elements, centerSelector, radius, speed, iconClass }) {
   const [centerPos, setCenterPos] = useState({ x: 0, y: 0 });
   const angleStep = (2 * Math.PI) / elements.length;
   const rotateAnimationRef = React.useRef(null);
@@ -39,7 +39,7 @@ export default function RotatingIcons({ elements, centerSelector, radius, speed 
 
   const update = () => {
     let parentRotation = rotateAnimationRef.current.progress() * 360;
-    let icons = document.querySelectorAll(`.${styles.icon}`);
+    let icons = document.querySelectorAll(`.${iconClass}`);
     icons.forEach((icon, i) => {
       icon.style.transform = `translate(-50%, -50%) rotate(${-parentRotation}deg)`;
     });
@@ -67,7 +67,7 @@ export default function RotatingIcons({ elements, centerSelector, radius, speed 
           const y = radius * Math.sin(angle);
 
           return (
-            <div key={i} className={styles.icon} style={{
+            <div key={i} className={`${styles.icon} ${iconClass}`} style={{
                 position: 'absolute',
                 left: `${radius + x}px`,
                 top: `${radius + y}px`,

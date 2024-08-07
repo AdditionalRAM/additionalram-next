@@ -23,7 +23,7 @@ export default async function Home() {
   return (
     <main>
       <ThreeCRT elementID="threecrt" />
-      <RotatingIcons elements={smIcons} centerSelector="#threecrt" radius={200} speed={10} />
+      <RotatingIcons elements={smIcons} centerSelector="#threecrt" radius={200} speed={10} iconClass="socialMediaIcons" />
     </main>
   );
 }
