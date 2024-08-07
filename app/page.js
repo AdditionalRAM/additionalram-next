@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import ThreeCRT from "./components/ThreeCRT";
 import RotatingIcons from "./components/RotatingIcons";
+import OrbittingText from "./components/OrbittingText";
 
 async function fetchExternalLinks() {
   // Fetch the data from the JSON file
@@ -22,8 +23,14 @@ export default async function Home() {
 
   return (
     <main>
-      <ThreeCRT elementID="threecrt" />
-      <RotatingIcons elements={smIcons} centerSelector="#threecrt" radius={200} speed={10} iconClass="socialMediaIcons" />
+      <section id="hero" style={{height: "130vh"}}>
+        <ThreeCRT elementID="threecrt" />
+        <RotatingIcons elements={smIcons} centerSelector="#threecrt" radius={200} speed={10} iconClass="socialMediaIcons" uniqueID="herosm" />
+      </section>
+      <section id="web-development">
+        <OrbittingText iconURL="/logos/globe-outline.svg" textToRotate="WEB-DEVELOPMENT-" rotateSpeed={10} elementID="web-development-orbit" />
+        <RotatingIcons elements={smIcons} centerSelector="#web-development-orbit" radius={200} speed={10} iconClass="webDevOrbit" uniqueID="webdev" />
+      </section>
     </main>
   );
 }

@@ -6,3 +6,7 @@ body{
   color: white;
   height: 200vh;
 }
+
+section{
+  min-height: 100vh;
+}
