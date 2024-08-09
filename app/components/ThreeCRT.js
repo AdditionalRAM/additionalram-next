@@ -6,7 +6,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import React, { useEffect, useRef } from 'react';
 
-export default function ThreeCRT({elementID}) {
+export default function ThreeCRT({ elementID }) {
   const canvasRef = useRef(null);
   const crtRef = useRef(null);
   const mousePos = useRef({ x: 0, y: 0 });
@@ -20,8 +20,31 @@ export default function ThreeCRT({elementID}) {
       alpha: true
     });
 
+    const updateRendererAndCameraSize = () => {
+      const width = window.innerWidth * 0.3;
+      const height = window.innerHeight * 0.3;
+
+      // Adjust renderer size
+      renderer.setSize(width, height);
+
+      // Adjust camera properties
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+
+      // Optionally adjust camera field of view based on screen size
+      const screenWidth = window.innerWidth;
+      if (screenWidth < 600) {
+        camera.fov = 40; // More zoomed in on small screens
+      } else if (screenWidth < 900) {
+        camera.fov = 30; // Medium zoom for tablets/smaller desktops
+      } else {
+        camera.fov = 25; // Default zoom for larger screens
+      }
+      camera.updateProjectionMatrix();
+    };
+
     renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(window.innerWidth * 0.3, window.innerHeight * 0.3);
+    updateRendererAndCameraSize();
     camera.position.setZ(30);
     scene.background = null;
 
@@ -31,7 +54,7 @@ export default function ThreeCRT({elementID}) {
       '/crt-head.glb',
       (gltf) => {
         const loadedCrt = gltf.scene;
-        loadedCrt.scale.set(10, 10, 10);
+        loadedCrt.scale.set(7, 7, 7);
         loadedCrt.position.y = -1;
         scene.add(loadedCrt);
         crtRef.current = loadedCrt;
@@ -76,11 +99,7 @@ export default function ThreeCRT({elementID}) {
     };
 
     const handleResize = () => {
-      const width = window.innerWidth * 0.3;
-      const height = window.innerHeight * 0.3;
-      renderer.setSize(width, height);
-      camera.aspect = width / height;
-      camera.updateProjectionMatrix();
+      updateRendererAndCameraSize();
     };
 
     window.addEventListener('mousemove', handleMouseMove);
@@ -104,9 +123,9 @@ export default function ThreeCRT({elementID}) {
   );
 }
 
-function calculateTargetRotation(mouseX, mouseY, rendererRect){
-  let rendererWidth = rendererRect.width, 
-  rendererHeight = rendererRect.height;
+function calculateTargetRotation(mouseX, mouseY, rendererRect) {
+  let rendererWidth = rendererRect.width,
+    rendererHeight = rendererRect.height;
 
   let canvasX = rendererRect.left + rendererWidth / 2;
   let canvasY = rendererRect.top + rendererHeight / 2;
@@ -121,10 +140,10 @@ function calculateTargetRotation(mouseX, mouseY, rendererRect){
   let crtTargetRotationX = (clampedMouseY / maxMouseY) * 0.5;
   let crtTargetRotationY = (clampedMouseX / maxMouseX) * 0.8;
 
-  return {x: crtTargetRotationX, y: crtTargetRotationY};
+  return { x: crtTargetRotationX, y: crtTargetRotationY };
 }
 
 // clamp helper function
-function clamp(num, min, max){
+function clamp(num, min, max) {
   return num <= min ? min : num >= max ? max : num;
 }

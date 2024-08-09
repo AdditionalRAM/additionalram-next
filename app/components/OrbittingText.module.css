@@ -1,8 +1,9 @@
 .orbitParent{
   transform-style: preserve-3d;
   position: relative;
-  width: 25vw;
-  height: 25vw;
+  /* width is 25vw or 500px, whichever is smaller */
+  width: min(25vw, 300px);
+  height: min(25vw, 300px);
   margin: 0 auto;
 }
 
@@ -24,7 +25,7 @@
   text-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.5), 0 0 0.1em #4eff7a;
 
   color: #00FF41;
-  font-size: 4em;
+  font-size: 4vw;
   transform-style: preserve-3d;
   transform-origin: 0 0;
 }

@@ -4,39 +4,50 @@ import React, { useEffect, useState, useRef } from 'react';
 import styles from './RotatingIcons.module.css';
 import gsap from 'gsap';
 
-export default function RotatingIcons({ elements, centerSelector, radius, speed, iconClass, uniqueID }) {
+export default function RotatingIcons({ elements, centerSelector, radiusVW, speed, iconClass, uniqueID }) {
+  const [radiusPx, setRadiusPx] = useState(0);
   const [centerPos, setCenterPos] = useState({ x: 0, y: 0 });
   const angleStep = (2 * Math.PI) / elements.length;
   const rotateAnimationRef = useRef(null);
   const mousePos = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
+    const updateRadiusPx = () => {
+      // Convert vw to pixels
+      const vw = window.innerWidth / 100;
+      setRadiusPx(radiusVW * vw);
+    };
+
     const updateCenterPosition = () => {
       const center = document.querySelector(centerSelector);
       if (center) {
         const rect = center.getBoundingClientRect();
         setCenterPos({
           x: rect.left + window.scrollX + rect.width / 2,
-          y: rect.top + window.scrollY + rect.height / 2
+          y: rect.top + window.scrollY + rect.height / 2,
         });
       }
     };
 
+    updateRadiusPx();
     updateCenterPosition();
     window.addEventListener('scroll', updateCenterPosition);
-    window.addEventListener('resize', updateCenterPosition);
+    window.addEventListener('resize', () => {
+      updateRadiusPx();
+      updateCenterPosition();
+    });
 
     rotateAnimationRef.current = gsap.to(`#${uniqueID}-container`, {
       rotation: 360,
       repeat: -1,
       duration: speed,
-      ease: 'linear'
+      ease: 'linear',
     });
 
     const handleMouseMove = (event) => {
       mousePos.current = {
         x: event.clientX,
-        y: event.clientY
+        y: event.clientY,
       };
     };
 
@@ -48,11 +59,11 @@ export default function RotatingIcons({ elements, centerSelector, radius, speed,
       window.removeEventListener('mousemove', handleMouseMove);
       rotateAnimationRef.current?.kill();
     };
-  }, [centerSelector, uniqueID, speed, iconClass]);
+  }, [centerSelector, radiusVW, uniqueID, speed, iconClass]);
 
   const clamp = (num, min, max) => {
     return Math.max(min, Math.min(num, max));
-  }
+  };
 
   const findSmallestDistance = () => {
     let smallestDistance = Infinity;
@@ -67,7 +78,7 @@ export default function RotatingIcons({ elements, centerSelector, radius, speed,
       }
     });
     return smallestDistance;
-  }
+  };
 
   const update = () => {
     if (!rotateAnimationRef.current) return;
@@ -93,23 +104,28 @@ export default function RotatingIcons({ elements, centerSelector, radius, speed,
         position: 'absolute',
         top: `${centerPos.y}px`,
         left: `${centerPos.x}px`,
-        width: `${radius * 2}px`,
-        height: `${radius * 2}px`,
-        transform: 'translate(-50%, -50%)' // Centers the container
+        width: `${radiusPx * 2}px`,
+        height: `${radiusPx * 2}px`,
+        transform: 'translate(-50%, -50%)',
       }}
     >
       <div className={styles.container} id={`${uniqueID}-container`}>
         {elements.map((el, i) => {
           const angle = angleStep * i;
-          const x = radius * Math.cos(angle);
-          const y = radius * Math.sin(angle);
+          const x = radiusPx * Math.cos(angle);
+          const y = radiusPx * Math.sin(angle);
 
           return (
-            <div key={i} className={`${styles.icon} ${styles[uniqueID]}-${iconClass}`} style={{
+            <div
+              key={i}
+              className={`${styles.icon} ${styles[uniqueID]}-${iconClass}`}
+              style={{
                 position: 'absolute',
-                left: `${radius + x}px`,
-                top: `${radius + y}px`,
-                transform: 'translate(-50%, -50%)' }} >
+                left: `${radiusPx + x}px`,
+                top: `${radiusPx + y}px`,
+                transform: 'translate(-50%, -50%)',
+              }}
+            >
               <div className={styles.iconContent}>{el}</div>
             </div>
           );

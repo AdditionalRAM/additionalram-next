@@ -1,6 +1,6 @@
 .socialLink{
-  width: 2em;
-  height: 2em;
+  width: min(5vw, 2em);
+  height: min(5vw, 2em);
   margin: 0.5em;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: inline-block;

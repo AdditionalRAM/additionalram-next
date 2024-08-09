@@ -25,11 +25,11 @@ export default async function Home() {
     <main>
       <section id="hero" style={{height: "130vh"}}>
         <ThreeCRT elementID="threecrt" />
-        <RotatingIcons elements={smIcons} centerSelector="#threecrt" radius={200} speed={10} iconClass="socialMediaIcons" uniqueID="herosm" />
+        <RotatingIcons elements={smIcons} centerSelector="#threecrt" radiusVW={20} speed={10} iconClass="socialMediaIcons" uniqueID="herosm" />
       </section>
       <section id="web-development">
         <OrbittingText iconURL="/logos/globe-outline.svg" textToRotate="WEB-DEVELOPMENT-" rotateSpeed={10} elementID="web-development-orbit" />
-        <RotatingIcons elements={smIcons} centerSelector="#web-development-orbit" radius={200} speed={10} iconClass="webDevOrbit" uniqueID="webdev" />
+        <RotatingIcons elements={smIcons} centerSelector="#web-development-orbit" radiusVW={20} speed={10} iconClass="webDevOrbit" uniqueID="webdev" />
       </section>
     </main>
   );
