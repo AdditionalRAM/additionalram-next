@@ -14,14 +14,14 @@ export default function ThreeCRT({elementID}) {
   useEffect(() => {
     // initialize Three.js scene
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({
       canvas: canvasRef.current,
       alpha: true
     });
 
     renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(window.innerWidth * 0.3, window.innerWidth * 0.3);
+    renderer.setSize(window.innerWidth * 0.3, window.innerHeight * 0.3);
     camera.position.setZ(30);
     scene.background = null;
 
@@ -31,7 +31,7 @@ export default function ThreeCRT({elementID}) {
       '/crt-head.glb',
       (gltf) => {
         const loadedCrt = gltf.scene;
-        loadedCrt.scale.set(7, 7, 7);
+        loadedCrt.scale.set(10, 10, 10);
         loadedCrt.position.y = -1;
         scene.add(loadedCrt);
         crtRef.current = loadedCrt;
@@ -75,16 +75,24 @@ export default function ThreeCRT({elementID}) {
       };
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('resize', () => {
-      renderer.setSize(window.innerWidth * 0.3, window.innerWidth * 0.3);
-      camera.aspect = window.innerWidth / window.innerHeight;
+    const handleResize = () => {
+      const width = window.innerWidth * 0.3;
+      const height = window.innerHeight * 0.3;
+      renderer.setSize(width, height);
+      camera.aspect = width / height;
       camera.updateProjectionMatrix();
-    });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('resize', handleResize);
+
+    // Initial resize to make sure everything is set up correctly
+    handleResize();
 
     // Cleanup
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('resize', handleResize);
       renderer.dispose();
     };
   }, []);
