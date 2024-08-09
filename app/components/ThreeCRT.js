@@ -81,9 +81,12 @@ export default function ThreeCRT({ elementID }) {
       requestAnimationFrame(animate);
 
       if (crtRef.current) {
+        let dampeningFactor = 0.05;
         let targetRotation = calculateTargetRotation(mousePos.current.x, mousePos.current.y, renderer.domElement.getBoundingClientRect());
-        crtRef.current.rotation.x = targetRotation.x;
-        crtRef.current.rotation.y = targetRotation.y;
+        // crtRef.current.rotation.x = targetRotation.x;
+        // crtRef.current.rotation.y = targetRotation.y;
+        crtRef.current.rotation.x += (targetRotation.x - crtRef.current.rotation.x) * dampeningFactor;
+        crtRef.current.rotation.y += (targetRotation.y - crtRef.current.rotation.y) * dampeningFactor;
       }
 
       renderer.render(scene, camera);
