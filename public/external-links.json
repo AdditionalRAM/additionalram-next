@@ -2,31 +2,37 @@
   {
     "name": "GitHub",
     "link": "https://github.com/AdditionalRAM",
-    "iconURL": "/logos/logo-github.svg"
+    "iconURL": "/logos/logo-github.svg",
+    "invert": true
   },
   {
     "name": "LinkedIn",
     "link": "https://www.linkedin.com/",
-    "iconURL": "/logos/logo-linkedin.svg"
+    "iconURL": "/logos/logo-linkedin.svg",
+    "invert": true
   },
   {
     "name": "Email",
     "link": "mailto:taha@additionalram.com",
-    "iconURL": "/logos/mail-outline.svg"
+    "iconURL": "/logos/mail-outline.svg",
+    "invert": true
   },
   {
     "name": "itch.io",
     "link": "https://additionalram.itch.io/",
-    "iconURL": "/logos/logo-itchio.svg"
+    "iconURL": "/logos/logo-itchio.svg",
+    "invert": true
   },
   {
     "name": "Instagram",
     "link": "https://www.instagram.com/",
-    "iconURL": "/logos/logo-instagram.svg"
+    "iconURL": "/logos/logo-instagram.svg",
+    "invert": true
   },
   {
     "name": "YouTube",
     "link": "https://www.youtube.com/@additionalram",
-    "iconURL": "/logos/logo-youtube.svg"
+    "iconURL": "/logos/logo-youtube.svg",
+    "invert": true
   }
 ]

@@ -17,7 +17,7 @@ export default async function Home() {
 
   const smIcons = externalLinks.map((link) => (
     <a href={link.link} key={link.name} className={styles.socialLink} target="_blank">
-      <img alt={link.name} src={link.iconURL} />
+      <img alt={link.name} src={link.iconURL} className={link.invert ? styles.invert : ""}/>
     </a>
   ));
 
