@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import ThreeCRT from "./components/ThreeCRT";
 import RotatingIcons from "./components/RotatingIcons";
 import OrbittingText from "./components/OrbittingText";
+import StackMember from "./components/StackMember";
 import AccessibleHeading from "./components/AccessibleHeading";
 
 import { Silkscreen } from "next/font/google";
@@ -38,6 +39,15 @@ export default async function Home() {
         <RotatingIcons elements={smIcons} centerSelector="#web-development-orbit" radiusVW={20} speed={10} iconClass="webDevOrbit" uniqueID="webdev" />
         <AccessibleHeading text="Web Development" level={1} />
         <h2 className={`${styles.heading} ${silkscreen.className}`}>My Stack</h2>
+        <StackMember title={"JavaScript"} description={"The essential programming language of web development. It's commonly used to build web applications and literally anything else."} memberID={"stackJS"} learntAt={
+          { name: "freeCodeCamp", iconURL: "/logos/fcc_primary_small.svg" }
+        } mainColor="#00FF41" />
+        <StackMember title={"JavaScript"} description={"The essential programming language of web development. It's commonly used to build web applications and literally anything else."} memberID={"stackJS2"} learntAt={
+          { name: "freeCodeCamp", iconURL: "/logos/fcc_primary_small.svg" }
+        } mainColor="#00FF41" />
+        <StackMember title={"JavaScript"} description={"The essential programming language of web development. It's commonly used to build web applications and literally anything else."} memberID={"stackJS3"} learntAt={
+          { name: "freeCodeCamp", iconURL: "/logos/fcc_primary_small.svg", url: "https://www.freecodecamp.org/" }
+        } mainColor="#00FF41" />
       </section>
     </main>
   );

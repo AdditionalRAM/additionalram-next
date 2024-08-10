@@ -1,0 +1,105 @@
+.container {
+  border: 0.2em solid var(--main-color);
+  border-radius: 0.5em;
+  width: min(60vw, 800px);
+  height: 3em;
+  margin: 0.5em auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.05);
+}
+
+.container .flexContainer {
+  width: 100%;
+  height: 3em;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.05);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .iconHolder {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.05);
+  margin-left: 1em;
+  height: 2.5em;
+  width: 2.5em;
+}
+
+.container .iconHolder img {
+  width: 100%;
+  height: 100%;
+}
+
+.container .learntAtIconHolder {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.05);
+  margin-right: 1em;
+  height: 2.5em;
+  width: 2.5em;
+}
+
+.container a{
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.05);
+}
+
+.container a:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.container .learntAtIconHolder img {
+  width: 100%;
+  height: 100%;
+}
+
+.container .title {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.05);
+  margin: 0 1em;
+  font-size: 1.25em;
+}
+
+.container .description {
+  height: 0;
+  overflow: hidden;
+  margin: 0 1em;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.05);
+
+}
+
+.container:hover {
+  height: 12em;
+}
+
+.container:hover .description {
+  height: 4em;
+}
+
+.container:hover .flexContainer {
+  height: 5em;
+}
+
+.container:hover .iconHolder {
+  height: 4em;
+  width: 4em;
+}
+
+.container:hover .learntAtIconHolder {
+  /* element is no longer part of flexbox */
+  /* position it at bottom right of container */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 4em;
+}
+
+.container:hover .title{
+  font-size: 1.5em;
+}
