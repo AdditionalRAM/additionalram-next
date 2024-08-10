@@ -1,3 +1,5 @@
+/* might be the worst css i've written in a while */
+
 .container {
   border: 0.2em solid var(--main-color);
   border-radius: 0.5em;
@@ -64,6 +66,7 @@
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.05);
   margin: 0 1em;
   font-size: 1.25em;
+  text-align: center;
 }
 
 .container .description {
@@ -71,10 +74,9 @@
   overflow: hidden;
   margin: 0 1em;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.05);
-
 }
 
-.container:hover {
+.container:hover{
   height: 12em;
 }
 
@@ -102,4 +104,38 @@
 
 .container:hover .title{
   font-size: 1.5em;
+  text-align: right;
+  color: var(--main-color);
+}
+
+.invert{
+  filter: invert(1);
+}
+
+/* mobile */
+@media (max-width: 600px) {
+  .container {
+    width: 90vw;
+  }
+
+  .container:hover{
+    height: 15em;
+  }
+
+  .container .title {
+    font-size: 1em;
+  }
+
+  .container:hover .description {
+    margin: 0 0.5em;
+    height: 7em;
+  }
+
+  .container .iconHolder {
+    margin-left: 0.5em;
+  }
+
+  .container .learntAtIconHolder {
+    margin-right: 0.5em;
+  }
 }

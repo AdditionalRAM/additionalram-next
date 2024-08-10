@@ -1,0 +1,81 @@
+[
+  {
+    "title": "HTML",
+    "description": "Hypertext Markup Language. Skeleton of the webpage. Very basic.",
+    "imageURL": "/logos/logo-html5.svg",
+    "learntAt": {
+      "prefix": "Certificate",
+      "name": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/certification/AdditionalRAM/responsive-web-design",
+      "iconURL": "/logos/logo-fcc.svg"
+    }
+  },
+  {
+    "title": "CSS and Sass",
+    "description": "Cascading Style Sheets. Responsible for the layout, design, and overall presentation of the webpage. Syntactically Awesome Style Sheets to make it slightly less annoying to write.",
+    "imageURL": "/logos/logo-css3.svg",
+    "learntAt": {
+      "prefix": "Certificate",
+      "name": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/certification/AdditionalRAM/responsive-web-design",
+      "iconURL": "/logos/logo-fcc.svg"
+    }
+  },
+  {
+    "title": "JavaScript",
+    "description": "The language that is used to program everything it wasn't intended to. Essential web development skill.",
+    "imageURL": "/logos/logo-javascript.svg",
+    "learntAt": {
+      "prefix": "Certificate",
+      "name": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/certification/AdditionalRAM/javascript-algorithms-and-data-structures",
+      "iconURL": "/logos/logo-fcc.svg"
+    }
+  },
+  {
+    "title": "React",
+    "description": "JavaScript library for building user interfaces. Makes front-end development fast and efficient.",
+    "imageURL": "/logos/logo-react.svg",
+    "learntAt": {
+      "prefix": "Certificate",
+      "name": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/certification/AdditionalRAM/front-end-libraries",
+      "iconURL": "/logos/logo-fcc.svg"
+    }
+  },
+  {
+    "title": "Next.js",
+    "description": "My JavaScript framework of choice. React with flexible server-side rendering as well as full stack capabilities.",
+    "imageURL": "/logos/logo-nextjs.svg",
+    "learntAt": {
+      "prefix": "Course",
+      "name": "fireship.io",
+      "url": "https://fireship.io/courses/nextjs/",
+      "iconURL": "/logos/logo-fireship.svg",
+      "invertLogo": true
+    }
+  },
+  {
+    "title": "Prisma",
+    "description": "Simplifies database access with an easy-to-use API.",
+    "imageURL": "/logos/logo-prisma.svg",
+    "learntAt": {
+      "prefix": "Course",
+      "name": "fireship.io",
+      "url": "https://fireship.io/courses/nextjs/",
+      "iconURL": "/logos/logo-fireship.svg",
+      "invertLogo": true
+    }
+  },
+  {
+    "title": "PostgreSQL",
+    "description": "Powerful, open-source relational database system. Used for handling large-scale data efficiently.",
+    "imageURL": "/logos/logo-postgresql.svg",
+    "learntAt": {
+      "prefix": "Certificate",
+      "name": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/certification/AdditionalRAM/relational-database-v8",
+      "iconURL": "/logos/logo-fcc.svg"
+    }
+  }
+]
