@@ -23,3 +23,11 @@
 .invert{
   filter: invert(1);
 }
+
+.heading{
+  margin: 0.5em;
+  margin-top: 20vh;
+  font-size: 3em;
+  color: #00FF41;
+  text-align: center;
+}

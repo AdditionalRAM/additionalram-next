@@ -3,6 +3,11 @@ import styles from "./page.module.css";
 import ThreeCRT from "./components/ThreeCRT";
 import RotatingIcons from "./components/RotatingIcons";
 import OrbittingText from "./components/OrbittingText";
+import AccessibleHeading from "./components/AccessibleHeading";
+
+import { Silkscreen } from "next/font/google";
+
+const silkscreen = Silkscreen({ subsets: ["latin"], weight: '400' });
 
 async function fetchExternalLinks() {
   // Fetch the data from the JSON file
@@ -23,6 +28,7 @@ export default async function Home() {
 
   return (
     <main>
+      <AccessibleHeading text="AdditionalRAM's Portfolio" level={1} />
       <section id="hero" style={{height: "130vh"}}>
         <ThreeCRT elementID="threecrt" />
         <RotatingIcons elements={smIcons} centerSelector="#threecrt" radiusVW={20} speed={10} iconClass="socialMediaIcons" uniqueID="herosm" />
@@ -30,6 +36,8 @@ export default async function Home() {
       <section id="web-development">
         <OrbittingText iconURL="/logos/globe-outline.svg" textToRotate="WEB-DEVELOPMENT-" rotateSpeed={10} elementID="web-development-orbit" />
         <RotatingIcons elements={smIcons} centerSelector="#web-development-orbit" radiusVW={20} speed={10} iconClass="webDevOrbit" uniqueID="webdev" />
+        <AccessibleHeading text="Web Development" level={1} />
+        <h2 className={`${styles.heading} ${silkscreen.className}`}>My Stack</h2>
       </section>
     </main>
   );
