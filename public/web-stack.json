@@ -3,6 +3,7 @@
     "title": "HTML",
     "description": "Hypertext Markup Language. Skeleton of the webpage. Very basic.",
     "imageURL": "/logos/logo-html5.svg",
+    "invertLogo" : true,
     "learntAt": {
       "prefix": "Certificate",
       "name": "freeCodeCamp",
@@ -14,6 +15,7 @@
     "title": "CSS and Sass",
     "description": "Cascading Style Sheets. Responsible for the layout, design, and overall presentation of the webpage. Syntactically Awesome Style Sheets to make it slightly less annoying to write.",
     "imageURL": "/logos/logo-css3.svg",
+    "invertLogo" : true,
     "learntAt": {
       "prefix": "Certificate",
       "name": "freeCodeCamp",
@@ -25,6 +27,7 @@
     "title": "JavaScript",
     "description": "The language that is used to program everything it wasn't intended to. Essential web development skill.",
     "imageURL": "/logos/logo-javascript.svg",
+    "invertLogo" : true,
     "learntAt": {
       "prefix": "Certificate",
       "name": "freeCodeCamp",
@@ -36,6 +39,7 @@
     "title": "React",
     "description": "JavaScript library for building user interfaces. Makes front-end development fast and efficient.",
     "imageURL": "/logos/logo-react.svg",
+    "invertLogo" : true,
     "learntAt": {
       "prefix": "Certificate",
       "name": "freeCodeCamp",
@@ -46,7 +50,8 @@
   {
     "title": "Next.js",
     "description": "My JavaScript framework of choice. React with flexible server-side rendering as well as full stack capabilities.",
-    "imageURL": "/logos/logo-nextjs.svg",
+    "imageURL": "/logos/next-js.svg",
+    "invertLogo" : true,
     "learntAt": {
       "prefix": "Course",
       "name": "fireship.io",
@@ -58,7 +63,8 @@
   {
     "title": "Prisma",
     "description": "Simplifies database access with an easy-to-use API.",
-    "imageURL": "/logos/logo-prisma.svg",
+    "imageURL": "/logos/Prisma-LightSymbol.svg",
+    "invertLogo" : false,
     "learntAt": {
       "prefix": "Course",
       "name": "fireship.io",
@@ -70,7 +76,8 @@
   {
     "title": "PostgreSQL",
     "description": "Powerful, open-source relational database system. Used for handling large-scale data efficiently.",
-    "imageURL": "/logos/logo-postgresql.svg",
+    "imageURL": "/logos/postgresql.svg",
+    "invertLogo" : true,
     "learntAt": {
       "prefix": "Certificate",
       "name": "freeCodeCamp",

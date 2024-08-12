@@ -6,7 +6,7 @@
   display: inline-block;
 }
 
-.socialLink:hover{
+a.socialLink:hover{
   transform: scale(1.2);
 }
 
@@ -16,7 +16,7 @@
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.05);
 }
 
-.socialLink:hover img {
+a.socialLink:hover img {
   filter: invert(69%) sepia(61%) saturate(5400%) hue-rotate(99deg) brightness(122%) contrast(113%);
 }
 

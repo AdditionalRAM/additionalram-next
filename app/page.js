@@ -7,6 +7,7 @@ import AccessibleHeading from "./components/AccessibleHeading";
 
 import { Silkscreen } from "next/font/google";
 import TechStack from "./components/TechStack";
+import TravellingIcon from "./components/TravellingIcon";
 
 const silkscreen = Silkscreen({ subsets: ["latin"], weight: '400' });
 
@@ -29,6 +30,12 @@ export default async function Home() {
 
   const webStack = await fetchLocalJson("web-stack");
 
+  const webStackIcons = webStack.map((data, index) => (
+    <div id={`${data.title}-${index}-holder`} className={styles.socialLink}>
+      <TravellingIcon key={data.title} iconURL={data.imageURL} iconID={`${data.title}-icon`} shouldInvert={data.invertLogo} travelFromID={`${data.title}-${index}-holder`} travelToID={`${data.title}-stack-member-icon`} travelDuration={1} imgAlt={data.title} />
+    </div>
+  ));
+
   return (
     <main>
       <AccessibleHeading text="AdditionalRAM's Portfolio" level={1} />
@@ -38,7 +45,7 @@ export default async function Home() {
       </section>
       <section id="web-development">
         <OrbittingText iconURL="/logos/globe-outline.svg" textToRotate="WEB-DEVELOPMENT-" rotateSpeed={10} elementID="web-development-orbit" />
-        <RotatingIcons elements={smIcons} centerSelector="#web-development-orbit" radiusVW={20} speed={10} iconClass="webDevOrbit" uniqueID="webdev" />
+        <RotatingIcons elements={webStackIcons} centerSelector="#web-development-orbit" radiusVW={20} speed={10} iconClass="webDevOrbit" uniqueID="webdev" />
         <AccessibleHeading text="Web Development" level={1} />
         <h2 className={`${styles.heading} ${silkscreen.className}`}>My Stack</h2>
         <TechStack dataset={webStack} />
