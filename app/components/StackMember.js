@@ -19,6 +19,9 @@ export default function StackMember({ title, description, learntAt, memberID, ma
         </div>
       </div>
       <p className={styles.description} id={`${memberID}-description`}>{description}</p>
+      <div className={styles.learntAtDivider} id={`${memberID}-learntat-divider`}>
+        <p className={styles.learntAtPrefix} id={`${memberID}-learntat-prefix`}>{`${learntAt.name} ${learntAt.prefix}:`}</p>
+      </div>
     </div>
   );
 }
