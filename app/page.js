@@ -12,7 +12,7 @@ import TravellingIcon from "./components/TravellingIcon";
 const silkscreen = Silkscreen({ subsets: ["latin"], weight: '400' });
 
 async function fetchLocalJson(filename) {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/${filename}.json`);  
+  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/json/${filename}.json`);  
   const data = await response.json();
   return data;
 }

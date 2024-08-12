@@ -1,0 +1,90 @@
+[
+  {
+    "title": "additionalram.github.io",
+    "description": "My old and now outdated portfolio website. I started making it when I was just learning about HTML and CSS and updated it as I made progress. But now, I've come a long way into learning other frameworks and general about design so I was no longer satisfied with its design, which is why I made a brand new site in Next.js.",
+    "techStack": ["HTML", "CSS & Sass", "JavaScript", "jQuery"],
+    "keyFeatures": [
+      "Responsive design: Significant effort was put into making sure the website adapts to the user's screen size and functions regardless of the device it's being viewed on.",
+      "API integration: The portfolio section of the page dynamically loads content that is not hardcoded so it's easier to update.",
+      "Dark / light mode: The website features both a dark and a light mode with a switcher and can detect what the user prefers.",
+      "Animations: Scroll in effects, hover animations and more make the website feel alive and dynamic, and less like you're viewing a static document."
+    ],
+    "dateCreated": "September 2023",
+    "status": "Completed, archived",
+    "improvements": [
+      "The page's light mode could be improved to look better.",
+      "Better image loading could be introduced so that a low resolution version is loaded first before the full image fades in.",
+      "The quality of the projects in the portfolio could be better. For example, the entire DOM projects section does not need to be there."
+    ],
+    "externalLinks": {
+      "sourceCode": "// insert source code",
+      "liveDemo": "// insert live demo"
+    }
+  },
+  {
+    "title": "Simphase",
+    "description": "A clone of the old website my father's company used to use. The original was made with themes and WordPress by someone else. This project was an exercise in replicating a professional grade website in order to demonstrate my web development knowledge.",
+    "techStack": ["HTML", "CSS & Sass", "JavaScript", "jQuery"],
+    "keyFeatures": [
+      "Responsive design: The website adapts to the user's screen size.",
+      "Animations: The website features smooth scroll-in as well as hover animations to ensure it feels lively."
+    ],
+    "dateCreated": "December 2023",
+    "status": "Completed",
+    "improvements": [
+      "Some glitches in within the layout of the about us page could be improved, such as the team members description not properly aligning.",
+      "Some sections of the site look bad or incomplete on mobile devices even though they partially respond to the screen size.",
+      "Some sections have poor visibility on certain devices due to background image.",
+      "The language switcher that was in the original website was never implemented, the flag of the UK is lonely.",
+      "The website is only in light mode, a dark mode could be implemented."
+    ],
+    "externalLinks": {
+      "sourceCode": "// insert source code",
+      "liveDemo": "// insert live demo"
+    }
+  },
+  {
+    "title": "Pohlarz Ingenieure",
+    "description": "My first work for somebody else. I designed and developed a responsive portfolio website for Pohlarz Ingenieure.",
+    "techStack": ["HTML", "CSS & Sass", "JavaScript", "jQuery"],
+    "keyFeatures": [
+      "Responsive design: The website responds to changes in screen size and looks good on any device, as every website should.",
+      "Animations: Nice animations are all over the website, making navigating around a pleasure for your eyes.",
+      "Parallax scroll: Many elements have parallax scrolling properties which gives the page sense of depth.",
+      "Dynamic fetching: All projects are fetched dynamically, making everything easy to edit and efficient to load.",
+      "Image loading: The images load lazily and show low quality versions of themselves before loading to ensure a good experience even on slow internet connections."
+    ],
+    "dateCreated": "January 2024",
+    "status": "Close to completion. Development is temporarily paused pending feedback from the client.",
+    "improvements": [
+      "The images will be viewable in a gallery form with ability to zoom in.",
+      "Projects are currently placeholders and are to be replaced with real ones.",
+      "Certain issues with mobile navbar need to be fixed."
+    ],
+    "externalLinks": {
+      "sourceCode": null,
+      "liveDemo": "https://pohlarz-ingenieure.de"
+    }
+  },
+  {
+    "title": "Project 'Flowdepth'",
+    "description": "This project attempts to solve the massive problem of procrastination that many people my age including myself have been dealing with. I am hopeful this project helps people spend more time productively and actually have fun working.",
+    "techStack": ["Next.js", "CSS Modules", "JavaScript", "Prisma", "PostgreSQL"],
+    "keyFeatures": [
+      "Track how much time you spend productively, similar to 'Focus sessions' on Windows 11. Create separate categories, each with their own timers, settable goals and reminders.",
+      "Social progress: Share your progress with friends to boost dopamine and introduce accountability. If you've been slacking off, the friends you've added will know.",
+      "Collaborate: Create collaborated projects and track the time of many different users to boost productivity in group tasks.",
+      "Cross platform: You improve your productivity on the web, on desktop or mobile."
+    ],
+    "dateCreated": "June 2024",
+    "status": "Early concept",
+    "improvements": [
+      "The project is very early in development and far from release. Improvements will be pushed as updates as development progresses.",
+      "This project may not start development for a long time due to other commitments in my life."
+    ],
+    "externalLinks": {
+      "sourceCode": null,
+      "liveDemo": null
+    }
+  }
+]
