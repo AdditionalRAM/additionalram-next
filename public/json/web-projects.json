@@ -11,7 +11,7 @@
     ],
     "dateCreated": "September 2023",
     "status": "Completed, archived",
-    "statusIconURL": "/icons/checkmark-circle-outline.svg",
+    "statusIconURL": "/icons/archive-outline.svg",
     "statusIconInvert": true,
     "improvements": [
       "The page's light mode could be improved to look better.",
@@ -26,7 +26,7 @@
       "/images/additionalram/screenshot-2.webp"
     ],
     "externalLinks": {
-      "sourceCode": "// insert source code",
+      "sourceCode": "https://github.com",
       "liveDemo": "// insert live demo",
       "download": null
     }
@@ -58,8 +58,8 @@
       "/images/Simphase/3.webp"
     ],
     "externalLinks": {
-      "sourceCode": "// insert source code",
-      "liveDemo": "// insert live demo",
+      "sourceCode": "https://github.com",
+      "liveDemo": "https://itch.io",
       "download": null
     }
   },
