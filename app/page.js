@@ -9,6 +9,7 @@ import { Silkscreen } from "next/font/google";
 import TechStack from "./components/TechStack";
 import TravellingIcon from "./components/TravellingIcon";
 import ProjectsMember from "./components/ProjectsMember";
+import ProjectsGrid from "./components/ProjectsGrid";
 
 const silkscreen = Silkscreen({ subsets: ["latin"], weight: '400' });
 
@@ -53,7 +54,7 @@ export default async function Home() {
         <h2 className={`${styles.heading} ${silkscreen.className}`}>My Skills</h2>
         <TechStack dataset={webStack} />
         <h2 className={`${styles.heading} ${silkscreen.className}`}>My Projects</h2>
-        <ProjectsMember project={webProjects[0]} />
+        <ProjectsGrid projects={webProjects} elementID="web-projects-grid" />
       </section>
     </main>
   );

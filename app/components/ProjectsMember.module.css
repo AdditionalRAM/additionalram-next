@@ -30,7 +30,7 @@
   text-align: center;
   /* text glow white */
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.05);
-  text-shadow: 0 0 5px white;
+  text-shadow: 0 0 3px white;
   text-wrap: balance;
   word-break: break-word;
   overflow-wrap: break-word;

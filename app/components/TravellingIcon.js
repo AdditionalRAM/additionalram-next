@@ -7,6 +7,7 @@ import { CustomEase } from "gsap/CustomEase";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(CustomEase);
 
 export default function TravellingIcon({
   iconURL,

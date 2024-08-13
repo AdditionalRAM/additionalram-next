@@ -12,14 +12,14 @@ export default function ProjectsMember({ project }){
   // helps break point at . in title
   const formattedTitle = project.title.replace(/\./g, "\u200B.");
 
-
+  // TODO: modal displays details on click
   return (
     <div id={projectID} className={styles.projectHolder}>
       <div className={styles.imageHolder}>
         <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}${project.thumbnailImageURL}`} alt={project.title} fill className={styles.projectImage} />
       </div>
       <div className={styles.titleHolder}>
-        <p className={styles.title}>{formattedTitle}</p>
+        <p className={`${styles.title}`}>{formattedTitle}</p>
       </div>
     </div>
   );
