@@ -8,6 +8,7 @@ import AccessibleHeading from "./components/AccessibleHeading";
 import { Silkscreen } from "next/font/google";
 import TechStack from "./components/TechStack";
 import TravellingIcon from "./components/TravellingIcon";
+import ProjectsMember from "./components/ProjectsMember";
 
 const silkscreen = Silkscreen({ subsets: ["latin"], weight: '400' });
 
@@ -36,6 +37,8 @@ export default async function Home() {
     </div>
   ));
 
+  const webProjects = await fetchLocalJson("web-projects");
+
   return (
     <main>
       <AccessibleHeading text="AdditionalRAM's Portfolio" level={1} />
@@ -47,8 +50,10 @@ export default async function Home() {
         <OrbittingText iconURL="/logos/globe-outline.svg" textToRotate="WEB-DEVELOPMENT-" rotateSpeed={10} elementID="web-development-orbit" />
         <RotatingIcons elements={webStackIcons} centerSelector="#web-development-orbit" radiusVW={20} speed={10} iconClass="webDevOrbit" uniqueID="webdev" />
         <AccessibleHeading text="Web Development" level={1} />
-        <h2 className={`${styles.heading} ${silkscreen.className}`}>My Stack</h2>
+        <h2 className={`${styles.heading} ${silkscreen.className}`}>My Skills</h2>
         <TechStack dataset={webStack} />
+        <h2 className={`${styles.heading} ${silkscreen.className}`}>My Projects</h2>
+        <ProjectsMember project={webProjects[0]} />
       </section>
     </main>
   );

@@ -11,14 +11,24 @@
     ],
     "dateCreated": "September 2023",
     "status": "Completed, archived",
+    "statusIconURL": "/icons/checkmark-circle-outline.svg",
+    "statusIconInvert": true,
     "improvements": [
       "The page's light mode could be improved to look better.",
       "Better image loading could be introduced so that a low resolution version is loaded first before the full image fades in.",
       "The quality of the projects in the portfolio could be better. For example, the entire DOM projects section does not need to be there."
     ],
+    "platforms": ["Web"],
+    "thumbnailImageURL": "/images/additionalram/thumbnail.webp",
+    "imageURLs": [
+      "/images/additionalram/screenshot-0.webp",
+      "/images/additionalram/screenshot-1.webp",
+      "/images/additionalram/screenshot-2.webp"
+    ],
     "externalLinks": {
       "sourceCode": "// insert source code",
-      "liveDemo": "// insert live demo"
+      "liveDemo": "// insert live demo",
+      "download": null
     }
   },
   {
@@ -31,6 +41,8 @@
     ],
     "dateCreated": "December 2023",
     "status": "Completed",
+    "statusIconURL": "/icons/checkmark-circle-outline.svg",
+    "statusIconInvert": true,
     "improvements": [
       "Some glitches in within the layout of the about us page could be improved, such as the team members description not properly aligning.",
       "Some sections of the site look bad or incomplete on mobile devices even though they partially respond to the screen size.",
@@ -38,9 +50,17 @@
       "The language switcher that was in the original website was never implemented, the flag of the UK is lonely.",
       "The website is only in light mode, a dark mode could be implemented."
     ],
+    "platforms": ["Web"],
+    "thumbnailImageURL": "/images/Simphase/thumbnail.webp",
+    "imageURLs": [
+      "/images/Simphase/1.webp",
+      "/images/Simphase/2.webp",
+      "/images/Simphase/3.webp"
+    ],
     "externalLinks": {
       "sourceCode": "// insert source code",
-      "liveDemo": "// insert live demo"
+      "liveDemo": "// insert live demo",
+      "download": null
     }
   },
   {
@@ -56,14 +76,24 @@
     ],
     "dateCreated": "January 2024",
     "status": "Close to completion. Development is temporarily paused pending feedback from the client.",
+    "statusIconURL": "/icons/checkmark-circle-outline.svg",
+    "statusIconInvert": true,
     "improvements": [
       "The images will be viewable in a gallery form with ability to zoom in.",
       "Projects are currently placeholders and are to be replaced with real ones.",
       "Certain issues with mobile navbar need to be fixed."
     ],
+    "platforms": ["Web"],
+    "thumbnailImageURL": "/images/PohlarzIngenieure/thumbnail.webp",
+    "imageURLs": [
+      "/images/PohlarzIngenieure/1.webp",
+      "/images/PohlarzIngenieure/2.webp",
+      "/images/PohlarzIngenieure/3.webp"
+    ],
     "externalLinks": {
       "sourceCode": null,
-      "liveDemo": "https://pohlarz-ingenieure.de"
+      "liveDemo": "https://pohlarz-ingenieure.de",
+      "download": null
     }
   },
   {
@@ -78,13 +108,23 @@
     ],
     "dateCreated": "June 2024",
     "status": "Early concept",
+    "statusIconURL": "/icons/checkmark-circle-outline.svg",
+    "statusIconInvert": true,
     "improvements": [
       "The project is very early in development and far from release. Improvements will be pushed as updates as development progresses.",
       "This project may not start development for a long time due to other commitments in my life."
     ],
+    "platforms": ["Web"],
+    "thumbnailImageURL": "/images/Flowdepth/thumbnail.webp",
+    "imageURLs": [
+      "/images/Flowdepth/1.webp",
+      "/images/Flowdepth/2.webp",
+      "/images/Flowdepth/3.webp"
+    ],
     "externalLinks": {
       "sourceCode": null,
-      "liveDemo": null
+      "liveDemo": null,
+      "download": null
     }
   }
 ]
