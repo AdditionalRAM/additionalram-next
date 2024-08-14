@@ -6,14 +6,16 @@ import ProjectsMember from "./ProjectsMember";
 import ProjectModal from "./ProjectModal";
 
 export default function ProjectsGrid({ projects, elementID }) {
-  // const [showModal, setShowModal] = React.useState(false);
+  const [showModal, setShowModal] = React.useState(false);
+  const [selectedProject, setSelectedProject] = React.useState(projects[0]);
 
   const onProjectClick = (project) => {
-    console.log("Clicked on", project.title);
+    setSelectedProject(project);
+    setShowModal(true);
   }
 
   const onClose = () => {
-    console.log("Closed modal");
+    setShowModal(false);
   }
 
   return (
@@ -23,7 +25,7 @@ export default function ProjectsGrid({ projects, elementID }) {
         return <ProjectsMember project={project} onClick={() => onProjectClick(project)} />
       })}
     </div>
-    <ProjectModal show={true} project={projects[0]} onClose={onClose} />
+    <ProjectModal show={showModal} project={selectedProject} onClose={onClose} />
     </>
   );
 }

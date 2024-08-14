@@ -51,11 +51,11 @@
       "The website is only in light mode, a dark mode could be implemented."
     ],
     "platforms": ["Web"],
-    "thumbnailImageURL": "/images/Simphase/thumbnail.webp",
+    "thumbnailImageURL": "/images/simphase/thumbnail.webp",
     "imageURLs": [
-      "/images/Simphase/1.webp",
-      "/images/Simphase/2.webp",
-      "/images/Simphase/3.webp"
+      "/images/simphase/screenshot-0.webp",
+      "/images/simphase/screenshot-1.webp",
+      "/images/simphase/screenshot-2.webp"
     ],
     "externalLinks": {
       "sourceCode": "https://github.com",
@@ -65,7 +65,7 @@
   },
   {
     "title": "Pohlarz Ingenieure",
-    "description": "My first work for somebody else. I designed and developed a responsive portfolio website for Pohlarz Ingenieure.",
+    "description": "My first work for somebody else. I designed and developed a responsive portfolio website for Pohlarz Ingenieure. Development is temporarily paused pending feedback from the client.",
     "techStack": ["HTML", "CSS & Sass", "JavaScript", "jQuery"],
     "keyFeatures": [
       "Responsive design: The website responds to changes in screen size and looks good on any device, as every website should.",
@@ -75,8 +75,8 @@
       "Image loading: The images load lazily and show low quality versions of themselves before loading to ensure a good experience even on slow internet connections."
     ],
     "dateCreated": "January 2024",
-    "status": "Close to completion. Development is temporarily paused pending feedback from the client.",
-    "statusIconURL": "/icons/checkmark-circle-outline.svg",
+    "status": "Development pending",
+    "statusIconURL": "/icons/hourglass-outline.svg",
     "statusIconInvert": true,
     "improvements": [
       "The images will be viewable in a gallery form with ability to zoom in.",
@@ -84,11 +84,11 @@
       "Certain issues with mobile navbar need to be fixed."
     ],
     "platforms": ["Web"],
-    "thumbnailImageURL": "/images/PohlarzIngenieure/thumbnail.webp",
+    "thumbnailImageURL": "/images/pohlarz/thumbnail.webp",
     "imageURLs": [
-      "/images/PohlarzIngenieure/1.webp",
-      "/images/PohlarzIngenieure/2.webp",
-      "/images/PohlarzIngenieure/3.webp"
+      "/images/pohlarz/screenshot-0.webp",
+      "/images/pohlarz/screenshot-1.webp",
+      "/images/pohlarz/screenshot-2.webp"
     ],
     "externalLinks": {
       "sourceCode": null,
@@ -108,18 +108,18 @@
     ],
     "dateCreated": "June 2024",
     "status": "Early concept",
-    "statusIconURL": "/icons/checkmark-circle-outline.svg",
+    "statusIconURL": "/icons/bulb-outline.svg",
     "statusIconInvert": true,
     "improvements": [
       "The project is very early in development and far from release. Improvements will be pushed as updates as development progresses.",
       "This project may not start development for a long time due to other commitments in my life."
     ],
     "platforms": ["Web"],
-    "thumbnailImageURL": "/images/Flowdepth/thumbnail.webp",
+    "thumbnailImageURL": "/images/flowdepth/thumbnail.webp",
     "imageURLs": [
-      "/images/Flowdepth/1.webp",
-      "/images/Flowdepth/2.webp",
-      "/images/Flowdepth/3.webp"
+      "/images/flowdepth/screenshot-0.webp",
+      "/images/flowdepth/screenshot-1.webp",
+      "/images/flowdepth/screenshot-2.webp"
     ],
     "externalLinks": {
       "sourceCode": null,

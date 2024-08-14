@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./ProjectModal.module.css";
 import Image from "next/image";
 import { Silkscreen } from "next/font/google";
@@ -8,15 +8,27 @@ import { Silkscreen } from "next/font/google";
 const silkscreen = Silkscreen({ subsets: ["latin"], weight: '400' });
 
 export default function ProjectModal({ show, project, onClose }) {
-  if (!show) return null;
-
   let formattedTitle = project.title.replace(/\./g, "\u200B.");
+  let modalContentRef = useRef(null);
+
+  // useEffect(() => {
+  //   if (modalContentRef.current) {
+  //     const marginOffset = window.innerHeight * 0.1; // 5vh in pixels
+  //     modalContentRef.current.scrollTop = -marginOffset;
+  //   }
+  // }, [project]);
+
+  const handleBackdropClick = (e) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  }
 
   // whoa this HTML is complicated
   return (
-    <div className={styles.modalBackdrop} onClick={onClose}>
-      <button className={styles.modalClose} onClick={onClose}>Close</button>
-      <div className={styles.modalContent}>
+    <div className={`${styles.modalBackdrop} ${show ? "" : styles.hidden}`} onClick={handleBackdropClick}>
+      <button className={styles.modalClose} onClick={onClose}><img src="/icons/close-outline.svg" alt="Close" /></button>
+      <div className={styles.modalContent} ref={modalContentRef}>
         <div className={styles.verticalSectionHolder}>
           <div className={`${styles.verticalSection} ${styles.imageAndStackHolder}`}>
             <div className={styles.modalImageHolder}>
