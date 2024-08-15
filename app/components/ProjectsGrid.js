@@ -21,8 +21,8 @@ export default function ProjectsGrid({ projects, elementID }) {
   return (
     <>
     <div id={elementID} className={styles.projectsGrid}> 
-      {projects.map((project) => {
-        return <ProjectsMember project={project} onClick={() => onProjectClick(project)} />
+      {projects.map((project, index) => {
+        return <ProjectsMember key={index} project={project} onClick={() => onProjectClick(project)} />
       })}
     </div>
     <ProjectModal show={showModal} project={selectedProject} onClose={onClose} />

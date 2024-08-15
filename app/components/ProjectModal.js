@@ -72,7 +72,7 @@ export default function ProjectModal({ show, project, onClose }) {
         <p className={`${styles.miniTitle} ${silkscreen.className}`}>Images</p>
         <div className={styles.imagesHolder}>
           {project.imageURLs.map((image, index) => (
-            <div className={styles.individualImageHolder}>
+            <div className={styles.individualImageHolder} key={index}>
               <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}${image}`} alt={`${project.title} Image ${index + 1}`} fill className={styles.individualImage} sizes="(max-width: 768px) 70vw, 37.5vw" />
             </div>
           ))}
