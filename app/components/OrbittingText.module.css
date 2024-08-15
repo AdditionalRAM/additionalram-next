@@ -14,8 +14,8 @@
 .rotatingText{
   transform-style: preserve-3d;
   position: absolute;
-  pointer-events: none;
-  
+  pointer-events: none;  
+  will-change: transform;
 }
 
 .rotatingLetter{
@@ -23,7 +23,7 @@
   /* background-color: black; */
   /* border-radius: 0.3em; */
   text-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.5), 0 0 0.1em #4eff7a;
-
+  will-change: transform;
   color: #00FF41;
   font-size: 4vw;
   transform-style: preserve-3d;

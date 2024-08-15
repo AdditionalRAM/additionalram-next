@@ -5,7 +5,7 @@
     "imageURL": "/logos/logo-html5.svg",
     "invertLogo" : true,
     "learntAt": {
-      "prefix": "Certificate",
+      "prefix": "Certificate on",
       "name": "freeCodeCamp",
       "url": "https://www.freecodecamp.org/certification/AdditionalRAM/responsive-web-design",
       "iconURL": "/logos/logo-fcc.svg"
@@ -17,7 +17,7 @@
     "imageURL": "/logos/logo-css3.svg",
     "invertLogo" : true,
     "learntAt": {
-      "prefix": "Certificate",
+      "prefix": "Certificate on",
       "name": "freeCodeCamp",
       "url": "https://www.freecodecamp.org/certification/AdditionalRAM/responsive-web-design",
       "iconURL": "/logos/logo-fcc.svg"
@@ -29,7 +29,7 @@
     "imageURL": "/logos/logo-javascript.svg",
     "invertLogo" : true,
     "learntAt": {
-      "prefix": "Certificate",
+      "prefix": "Certificate on",
       "name": "freeCodeCamp",
       "url": "https://www.freecodecamp.org/certification/AdditionalRAM/javascript-algorithms-and-data-structures",
       "iconURL": "/logos/logo-fcc.svg"
@@ -41,7 +41,7 @@
     "imageURL": "/logos/logo-react.svg",
     "invertLogo" : true,
     "learntAt": {
-      "prefix": "Certificate",
+      "prefix": "Certificate on",
       "name": "freeCodeCamp",
       "url": "https://www.freecodecamp.org/certification/AdditionalRAM/front-end-libraries",
       "iconURL": "/logos/logo-fcc.svg"
@@ -53,7 +53,7 @@
     "imageURL": "/logos/next-js.svg",
     "invertLogo" : true,
     "learntAt": {
-      "prefix": "Course",
+      "prefix": "Course on",
       "name": "fireship.io",
       "url": "https://fireship.io/courses/nextjs/",
       "iconURL": "/logos/logo-fireship.svg",
@@ -66,7 +66,7 @@
     "imageURL": "/logos/Prisma-LightSymbol.svg",
     "invertLogo" : false,
     "learntAt": {
-      "prefix": "Course",
+      "prefix": "Course on",
       "name": "fireship.io",
       "url": "https://fireship.io/courses/nextjs/",
       "iconURL": "/logos/logo-fireship.svg",
@@ -79,7 +79,7 @@
     "imageURL": "/logos/postgresql.svg",
     "invertLogo" : true,
     "learntAt": {
-      "prefix": "Certificate",
+      "prefix": "Certificate on",
       "name": "freeCodeCamp",
       "url": "https://www.freecodecamp.org/certification/AdditionalRAM/relational-database-v8",
       "iconURL": "/logos/logo-fcc.svg"
