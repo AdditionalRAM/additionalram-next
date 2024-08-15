@@ -1,7 +1,7 @@
 [
   {
     "title": "HTML",
-    "description": "Hypertext Markup Language. Skeleton of the webpage. Very basic.",
+    "description": "The foundational language for creating the structure of web pages, used to organize content and make it accessible.",
     "imageURL": "/logos/logo-html5.svg",
     "invertLogo" : true,
     "learntAt": {
@@ -13,7 +13,7 @@
   },
   {
     "title": "CSS and Sass",
-    "description": "Cascading Style Sheets. Responsible for the layout, design, and overall presentation of the webpage. Syntactically Awesome Style Sheets to make it slightly less annoying to write.",
+    "description": "Responsible for the layout, design, and overall presentation of the webpage. Sass makes it slightly less annoying to write.",
     "imageURL": "/logos/logo-css3.svg",
     "invertLogo" : true,
     "learntAt": {
@@ -62,7 +62,7 @@
   },
   {
     "title": "Prisma",
-    "description": "Simplifies database access with an easy-to-use API.",
+    "description": "An ORM tool that simplifies database access with an easy-to-use API.",
     "imageURL": "/logos/Prisma-LightSymbol.svg",
     "invertLogo" : false,
     "learntAt": {
@@ -75,7 +75,7 @@
   },
   {
     "title": "PostgreSQL",
-    "description": "Powerful, open-source relational database system. Used for handling large-scale data efficiently.",
+    "description": "Powerful, open-source relational database system. Known for its reliability, scalability, and support for complex queries.",
     "imageURL": "/logos/postgresql.svg",
     "invertLogo" : true,
     "learntAt": {
