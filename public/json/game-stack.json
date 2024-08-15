@@ -1,0 +1,54 @@
+[
+  {
+    "title": "Unity",
+    "description": "A widely used game engine with useful tools to create cross platform 2D, 3D, VR and AR games with a huge community.",
+    "imageURL": "/logos/logo-unity.svg",
+    "invertLogo": false,
+    "learntAt": {
+      "prefix": "Learnt with various courses on",
+      "name": "YouTube",
+      "url": "https://www.youtube.com/@Brackeys",
+      "iconURL": "/logos/logo-youtube.svg",
+      "invertLogo": true
+    }
+  },
+  {
+    "title": "C#",
+    "description": "A powerful, object-oriented programming language often used with Unity for scripting pretty much everything.",
+    "imageURL": "/logos/logo-csharp.svg",
+    "invertLogo": true,
+    "learntAt": {
+      "prefix": "Learnt with various courses on",
+      "name": "YouTube",
+      "url": "https://www.youtube.com/@Brackeys",
+      "iconURL": "/logos/logo-youtube.svg",
+      "invertLogo": true
+    }
+  },
+  {
+    "title": "Aseprite",
+    "description": "My pixel art tool of choice due to its powerful toolset for creating 2D sprites, animations, and graphics and large userbase.",
+    "imageURL": "/logos/logo-aseprite.svg",
+    "invertLogo": false,
+    "learntAt": {
+      "prefix": "Learnt with various courses on",
+      "name": "YouTube",
+      "url": "https://www.youtube.com/@WattDesigns",
+      "iconURL": "/logos/logo-youtube.svg",
+      "invertLogo": true
+    }
+  },
+  {
+    "title": "Blender",
+    "description": "An open-source 3D creation suite useful for modeling, rigging, animating, and rendering 3D graphics, useful for creating character models or environments for games.",
+    "imageURL": "/logos/logo-blender.svg",
+    "invertLogo": true,
+    "learntAt": {
+      "prefix": "Learnt with various courses on",
+      "name": "YouTube",
+      "url": "https://www.youtube.com/watch?v=DiIoWrOlIRw&list=PLFt_AvWsXl0fEx02iXR8uhDsVGhmM9Pse",
+      "iconURL": "/logos/logo-youtube.svg",
+      "invertLogo": true
+    }
+  }
+]
