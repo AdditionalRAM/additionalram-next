@@ -32,7 +32,7 @@ export default function ProjectModal({ show, project, onClose }) {
         <div className={styles.verticalSectionHolder}>
           <div className={`${styles.verticalSection} ${styles.imageAndStackHolder}`}>
             <div className={styles.modalImageHolder}>
-              <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}${project.thumbnailImageURL}`} alt={project.title} fill className={styles.projectImage} />
+              <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}${project.thumbnailImageURL}`} alt={project.title} fill className={styles.projectImage} sizes="(max-width: 768px) 70vw, 25vw" />
             </div>
             <div className={styles.techStackHolder}>
               {project.techStack.map((tech, index) => (
@@ -73,7 +73,7 @@ export default function ProjectModal({ show, project, onClose }) {
         <div className={styles.imagesHolder}>
           {project.imageURLs.map((image, index) => (
             <div className={styles.individualImageHolder}>
-              <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}${image}`} alt={`${project.title} Image ${index + 1}`} fill className={styles.individualImage} />
+              <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}${image}`} alt={`${project.title} Image ${index + 1}`} fill className={styles.individualImage} sizes="(max-width: 768px) 70vw, 37.5vw" />
             </div>
           ))}
         </div>
