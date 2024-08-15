@@ -18,7 +18,7 @@ export default function ProjectsMember({ project, onClick }){
   return (
     <div id={projectID} className={styles.projectHolder} onClick={onClick}>
       <div className={styles.imageHolder}>
-        <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}${project.thumbnailImageURL}`} alt={project.title} fill className={styles.projectImage} />
+        <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}${project.thumbnailImageURL}`} alt={project.title} fill className={styles.projectImage} sizes="(max-width: 1250px) 250px, 20vw" />
       </div>
       <div className={styles.titleHolder}>
         <p className={`${styles.title}`}>{formattedTitle}</p>
