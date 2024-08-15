@@ -3,8 +3,9 @@
 import styles from "./OrbittingText.module.css";
 import { Silkscreen } from "next/font/google";
 
-import gsap from "gsap";
 import React, { useEffect, useRef, useState } from 'react';
+import gsap from "gsap";
+
 
 const silkscreen = Silkscreen({ subsets: ["latin"], weight: '400' });
 
@@ -61,9 +62,10 @@ export default function OrbittingText({ iconURL, textToRotate, rotateSpeed, elem
   useEffect(() => {
     const rotationAnimation = gsap.to(`#${elementID}-holder`, {
       duration: rotateSpeed,
-      rotationY: -360,
+      rotationY: "-=360",
       repeat: -1,
-      ease: "none"
+      ease: "none",
+
     });
     gsap.set(`#${elementID}-holder`, {
       rotateX: 7
