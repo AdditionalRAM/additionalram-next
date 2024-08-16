@@ -53,11 +53,11 @@
       "The UI should adapt better to aspect ratios that are not 16:9, some elements can currently extend outside the screen."
     ],
     "platforms": ["WebGL"],
-    "thumbnailImageURL": "/images/five-periods-at-timelers/thumbnail.webp",
+    "thumbnailImageURL": "/images/fpat/thumbnail.webp",
     "imageURLs": [
-      "/images/five-periods-at-timelers/screenshot-0.webp",
-      "/images/five-periods-at-timelers/screenshot-1.webp",
-      "/images/five-periods-at-timelers/screenshot-2.webp"
+      "/images/fpat/screenshot-0.webp",
+      "/images/fpat/screenshot-1.webp",
+      "/images/fpat/screenshot-2.webp"
     ],
     "externalLinks": {
       "sourceCode": null,
