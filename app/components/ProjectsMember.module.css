@@ -30,7 +30,7 @@
   text-align: center;
   /* text glow white */
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.05);
-  text-shadow: 0 0 3px white;
+  text-shadow: 0 0 2px white;
   text-wrap: balance;
   word-break: break-word;
   overflow-wrap: break-word;
@@ -48,7 +48,7 @@
 }
 
 .projectHolder:hover .title{
-  text-shadow: 0 0 10px white;
+  text-shadow: 1px 1px 3px white;
   transform: scale(1.1);
   color: #00FF41;
 }
