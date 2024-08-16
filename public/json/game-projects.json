@@ -1,0 +1,133 @@
+[
+  {
+    "title": "Mini World Adventures",
+    "description": "A quite traditional action-adventure game with a nice story. The game is heavily inspired by classics such as The Legend of Zelda. When I first started learning Unity, I followed a guide by Mister Taft Creates to create a 'zeldalike' game. After I learnt more and gained experience, I decided to revisit the concept and start from scratch making a similar game with a proper story and level design.",
+    "techStack": ["Unity", "C#", "Aseprite", "Scriptable Objects", "JSON", "DOTween"],
+    "keyFeatures": [
+      "Inventory system: The game has a versatile inventory system made using scriptable objects with 5 different categories of items that are all easily expandable with more features.",
+      "Saving and loading: Using statues scattered around the game world, the game saves your progress and inventory into a JSON format .sugoma file.",
+      "Lighting: With Unity's powerful Universal Render Pipeline, the game uses 2D lighting effects to add a sense of atmosphere to different areas. This is toggleable from the main menu for performance.",
+      "Pathfinding: The enemies and bosses feature A* pathfinding.",
+      "Multi-language support: English, German and Turkish are all supported languages with a custom expandable language loading system."
+    ],
+    "dateCreated": "November 2021",
+    "status": "Work in progress",
+    "statusIconURL": "/icons/hourglass-outline.svg",
+    "statusIconInvert": true,
+    "improvements": [
+      "At the start, the player needs to be guided better (with for example a quest system) so they can progress in the story.",
+      "The Dark Forest area is very big, confusing and feels mostly empty with barely anything to find.",
+      "Initial load from the main menu to the game world takes a long time without any progress report.",
+      "Because the demo is incomplete, the player feels lost after the Kologrent section, because they are unable to know what sections of the game are available.",
+      "Due to other commitments in life, the development has been temporarily paused."
+    ],
+    "platforms": ["Android", "Windows"],
+    "thumbnailImageURL": "/images/mini-world-adventures/thumbnail.webp",
+    "imageURLs": [
+      "/images/mini-world-adventures/screenshot-0.webp",
+      "/images/mini-world-adventures/screenshot-1.webp",
+      "/images/mini-world-adventures/screenshot-2.webp"
+    ],
+    "externalLinks": {
+      "sourceCode": "https://github.com/AdditionalRAM/MWA",
+      "liveDemo": null,
+      "download": "https://additionalram.itch.io/mini-world-adventures"
+    }
+  },
+  {
+    "title": "Five Periods at Timeler's",
+    "description": "An Undertale-style turn based fight against a character based on my maths and physics teacher. Mr Timeler, as we call him, is a massive meme in our school. I wanted to make an Undertale fight in Unity and stumbled upon 'Kahoot! OST - Megalovania' on YouTube, which I thought would be a perfect fight theme for Mr Timeler. It is filled with inside jokes, such as Mr Timeler attacking you with Tesla logos since he's a huge fan of Tesla and Elon Musk and can't stop talking about them in class.",
+    "techStack": ["Unity", "C#", "Aseprite"],
+    "keyFeatures": [
+      "Multiple endings: The game features 6 different endings with different conditions to get them: 'Good Ending', 'Neutral Ending', 'Bad Ending', 'Genocide Ending', 'Mother's Slipper Ending' and 'Ohio Ending'.",
+      "Attack patterns: Mr Timeler can attack you with math formulas, Tesla logos and batteries!",
+      "Questions: Mr Timeler asks you math questions which you can answer by raising your hand."
+    ],
+    "dateCreated": "December 2022",
+    "status": "Completed",
+    "statusIconURL": "/icons/checkmark-circle-outline.svg",
+    "statusIconInvert": true,
+    "improvements": [
+      "The fight doesn't have any progression at all, it's built more like a random encounter than a boss fight, so it can get boring to grind all the endings.",
+      "The non-genocide endings have very repeating questions and attacks, which could be changed to have some variety.",
+      "The UI should adapt better to aspect ratios that are not 16:9, some elements can currently extend outside the screen."
+    ],
+    "platforms": ["WebGL"],
+    "thumbnailImageURL": "/images/five-periods-at-timelers/thumbnail.webp",
+    "imageURLs": [
+      "/images/five-periods-at-timelers/screenshot-0.webp",
+      "/images/five-periods-at-timelers/screenshot-1.webp",
+      "/images/five-periods-at-timelers/screenshot-2.webp"
+    ],
+    "externalLinks": {
+      "sourceCode": null,
+      "liveDemo": "https://additionalram.itch.io/fpat",
+      "download": null
+    }
+  },
+  {
+    "title": "Money Wars",
+    "description": "Back in middle school, we used to play 'Money Wars' - a game we invented where we would try to knock the other player's coins off the desk. For the longest time ever, I had the idea of making this into a video game and decided to act upon it when Unity Netcode for GameObjects was released.",
+    "techStack": ["Unity", "C#", "Netcode for GameObjects", "Photoshop"],
+    "keyFeatures": [
+      "Online Multiplayer: The game features online multiplayer. One player can host and the other player can join via the join code. Netcode for GameObjects is used for the logic and Unity Relay is used to connect the players even when they're not in the same local area network.",
+      "Server authoritative: The game is fully server authoritative with client side prediction and reconciliation at each turn.",
+      "Physics: Physics are simulated with Unity's built in physics engine and the values are tweaked to feel accurate to how coins actually slide and bump around on a desk.",
+      "Effects and particles: Effects and particles are added when the coins are sliding around, bumping each other or falling off the desk to be eliminated to make it more satisfying to play."
+    ],
+    "dateCreated": "June 2023",
+    "status": "Archived",
+    "statusIconURL": "/icons/archive-outline.svg",
+    "statusIconInvert": true,
+    "improvements": [
+      "Matchmaking and player progression could be added to make the game more fun to play long term, as it is not much more than a tech demo in its current state.",
+      "Client prediction has to be made a lot more accurate than it currently is. The physics are simulated on the server and on each client. The coins then reconciliate by sliding into the correct position, which can be frustrating if the player had a better position on their client before reconciling.",
+      "Certain issues where the camera slides around and can go too far away could be fixed."
+    ],
+    "platforms": ["Android"],
+    "thumbnailImageURL": "/images/money-wars/thumbnail.webp",
+    "imageURLs": [
+      "/images/money-wars/screenshot-0.webp",
+      "/images/money-wars/screenshot-1.webp",
+      "/images/money-wars/screenshot-2.webp"
+    ],
+    "externalLinks": {
+      "sourceCode": null,
+      "liveDemo": null,
+      "download": "https://additionalram.itch.io/money-wars"
+    }
+  },
+  {
+    "title": "Armut Stars",
+    "description": "A top-down third person shooter. When I made this game, Brawl Stars and Soul Knight were trending among my friend groups, so those games ended up being the main inspirations of the game. At some point, I wanted to create an online saving system, so I started writing a custom backend using PHP and MySQL. I didn't have any sort of background with either of these technologies at the time, so I ended up biting off a lot more than I could chew, leading to me being severely overwhelmed and abandoning the project.",
+    "techStack": ["Unity", "C#", "Aseprite"],
+    "keyFeatures": [
+      "Characters and weapons: The game includes five different unlockable characters and three weapons for choosing. These are available through the shop or lootboxes.",
+      "Shop: The shop refreshes daily (at least would if it had server time) and gives the player different offers each day.",
+      "Lootboxes: The player can purchase 'boxes' in order to obtain resources, weapons and characters.",
+      "Ads: The game features 'testing' level Unity Ads integration, which was meant to be enabled upon release.",
+      "AI players: The game features 'AI' players that feature A* pathfinding and act like a player would, sort of like earlier .io games."
+    ],
+    "dateCreated": "August 2019",
+    "status": "Archived",
+    "statusIconURL": "/icons/archive-outline.svg",
+    "statusIconInvert": true,
+    "improvements": [
+      "The sprites look plain bad. They lack proper animations, lighting or consistent colouring.",
+      "The saving system uses PlayerPrefs, which is less than ideal. This is the reason I originally wanted to implement cloud based account saving.",
+      "There is barely any progression in the game and a very limited selection of game modes, which makes the game boring to play for longer periods of time."
+    ],
+    "platforms": ["Android"],
+    "thumbnailImageURL": "/images/armut-stars/thumbnail.webp",
+    "imageURLs": [
+      "/images/armut-stars/screenshot-0.webp",
+      "/images/armut-stars/screenshot-1.webp",
+      "/images/armut-stars/screenshot-2.webp"
+    ],
+    "externalLinks": {
+      "sourceCode": "https://github.com/AdditionalRAM/ArmutStars",
+      "liveDemo": null,
+      "download": "https://additionalram.itch.io/armut-stars"
+    }
+  }
+]

@@ -48,10 +48,12 @@ export default async function Home() {
     </div>
   ));
 
+  const gameProjects = await fetchLocalJson("game-projects");
+
   return (
     <main>
       <AccessibleHeading text="AdditionalRAM's Portfolio" level={1} />
-      <section id="hero" style={{height: "130vh"}}>
+      <section id="hero" style={{height: "100vh"}}>
         <ThreeCRT elementID="threecrt" />
         <RotatingIcons elements={smIcons} centerSelector="#threecrt" radiusVW={20} speed={10} iconClass="socialMediaIcons" uniqueID="herosm" />
       </section>
@@ -70,6 +72,8 @@ export default async function Home() {
         <RotatingIcons elements={gameStackIcons} centerSelector="#game-development-orbit" radiusVW={20} speed={10} iconClass="gameDevOrbit" uniqueID="gamedev" />
         <h2 className={`${styles.heading} ${silkscreen.className}`}>My Skills</h2>
         <TechStack dataset={gameStack} />
+        <h2 className={`${styles.heading} ${silkscreen.className}`}>My Projects</h2>
+        <ProjectsGrid projects={gameProjects} elementID="game-projects-grid" />
       </section>
     </main>
   );
