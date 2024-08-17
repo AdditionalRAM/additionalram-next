@@ -46,6 +46,20 @@ a.socialLink:hover img {
   text-align: center;
 }
 
+.paragraphHolder{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.paragraph{
+  margin: 0.5em 5vw;
+  font-size: 1.1em;
+  display: inline-block;
+  text-align: center;
+}
+
 .spaceTop{
   margin-top: 40vh;
 }
