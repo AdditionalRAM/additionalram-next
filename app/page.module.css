@@ -78,3 +78,10 @@ a.socialLink:hover img {
 .spaceTop{
   margin-top: 40vh;
 }
+
+.smLinksHolder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}

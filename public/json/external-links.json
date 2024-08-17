@@ -1,5 +1,11 @@
 [
   {
+    "name": "Email",
+    "link": "mailto:taha@additionalram.com",
+    "iconURL": "/logos/mail-outline.svg",
+    "invert": true
+  },
+  {
     "name": "GitHub",
     "link": "https://github.com/AdditionalRAM",
     "iconURL": "/logos/logo-github.svg",
@@ -9,12 +15,6 @@
     "name": "LinkedIn",
     "link": "https://www.linkedin.com/in/ekrem-taha-sener-4090b42ab/",
     "iconURL": "/logos/logo-linkedin.svg",
-    "invert": true
-  },
-  {
-    "name": "Email",
-    "link": "mailto:taha@additionalram.com",
-    "iconURL": "/logos/mail-outline.svg",
     "invert": true
   },
   {
