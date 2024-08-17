@@ -67,7 +67,7 @@ export default function Header() {
     <header className={`${styles.header} ${!isVisible ? styles.hide : ""}`} id="header">
       <nav className={styles.nav}>
         <a href="#hero" className={styles.crtHolder} id="header-crt-holder">
-          <ThreeCRT elementID="header-crt" obeyParentContainer={true} crtSize={5} />
+          <ThreeCRT elementID="header-crt" obeyParentContainer={true} crtSize={4} />
         </a>
         <a href="#about" className={`${silkscreen.className} ${styles.navLink}`}>
           About
