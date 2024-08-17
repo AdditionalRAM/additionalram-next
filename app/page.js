@@ -106,7 +106,7 @@ export default async function Home() {
           <p className={styles.paragraph}>Sener Engineering GmbH</p>
           <p className={styles.paragraph}>c/o Next Level Offices, Franklinstraße 11, 10587 Berlin</p>
           <p className={styles.paragraph}>Managing Director: BSc (Ing.) Semih SENER</p>
-          <p className={styles.paragraph}>Email: info@sener.ai</p>
+          <p className={styles.paragraph}>Email: semih@sener.ai</p>
           <p className={styles.paragraph}>Registration: District Court Charlottenburg HRB 249792B</p>
           <p className={styles.paragraph}>VAT ID: DE 36 0 36 10 40</p>
           <p className={styles.paragraph}>This page doesn't collect any user data or use cookies. All copyrighted logos and trademarks belong to their respective owners. "AdditionalRAM" is the username / alias Ekrem Taha SENER goes by and is not a trademark.</p>
