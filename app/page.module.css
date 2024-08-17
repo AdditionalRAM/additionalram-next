@@ -60,6 +60,21 @@ a.socialLink:hover img {
   text-align: center;
 }
 
+.paragraphLink{
+  color: #00FF41;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.05);
+  display: inline-block;
+  border-radius: 0.4em;
+  padding: 0.2em;
+}
+
+.paragraphLink:hover{
+  color: white;
+  transform: scale(1.01);
+  background-color: #00FF41;
+}
+
 .spaceTop{
   margin-top: 40vh;
 }

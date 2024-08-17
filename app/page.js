@@ -67,10 +67,11 @@ export default async function Home() {
           <p className={styles.paragraph}>Hey there! I'm Taha.</p>
           <p className={styles.paragraph}>I'm a self-taught web and game developer based in Berlin, Germany.</p>
           <p className={styles.paragraph}>I've been actively learning by myself since 2018, but my love for programming started all the way back in primary school.</p>
-          <p className={styles.paragraph}>Recently, I've had the incredible opportunity to intern at Food for Thought Media & Mad About Pandas Game Dev Studios.</p>
+          <p className={styles.paragraph}>Recently, I've had the incredible opportunity to intern at <a className={styles.paragraphLink} href="https://foodforthoughtmedia.com/" target="_blank">Food for Thought Media</a> & <a className={styles.paragraphLink} href="https://madaboutpandas.de/" target="_blank">Mad About Pandas</a>.</p>
           <p className={styles.paragraph}>During this internship, I was able to demonstrate my skills in game development with state machines in Unity and C# and learn a lot about the game design process.</p>
           <p className={styles.paragraph}>It was also there that I discovered my passion for web development after working on a web-based game.</p>
-          <p className={styles.paragraph}>This internship is not the only thing I've been doing. Scroll down to see what technologies I've learned by myself and the projects I've put them to use in!</p>
+          <p className={styles.paragraph}>This internship is not the only thing I've been doing.</p>
+          <p className={styles.paragraph}>Scroll down to see what technologies I've learned by myself and the projects I've put them to use in!</p>
 
         </div>
       </section>

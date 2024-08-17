@@ -30,7 +30,7 @@ export default function GlitchyText({ text, fontClassName, extraClassName }) {
 
     const slowlyRandomize = async () => {
       for (let i = text.length; i >= 0; i--) {
-        await new Promise(r => setTimeout(r, 40));
+        await new Promise(r => setTimeout(r, 70));
         if (isMounted) {
           setDisplayText(randomify(text, i));
         }
