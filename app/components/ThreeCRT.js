@@ -6,7 +6,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import React, { useEffect, useRef } from 'react';
 
-export default function ThreeCRT({ elementID }) {
+export default function ThreeCRT({ elementID, obeyParentContainer, crtSize }) {
   const canvasRef = useRef(null);
   const crtRef = useRef(null);
   const mousePos = useRef({ x: 0, y: 0 });
@@ -54,7 +54,10 @@ export default function ThreeCRT({ elementID }) {
       '/crt-head.glb',
       (gltf) => {
         const loadedCrt = gltf.scene;
-        loadedCrt.scale.set(7, 7, 7);
+        let currentCrtSize = crtSize || 7;
+        loadedCrt.scale.set(
+          currentCrtSize, currentCrtSize, currentCrtSize
+        );
         loadedCrt.position.y = -1;
         scene.add(loadedCrt);
         crtRef.current = loadedCrt;
@@ -120,7 +123,7 @@ export default function ThreeCRT({ elementID }) {
   }, []);
 
   return (
-    <div className={styles.canvasContainer} id={elementID}>
+    <div className={obeyParentContainer ? styles.obeyCanvasContainer : styles.canvasContainer} id={elementID}>
       <canvas ref={canvasRef} id="bg" className={styles.canvas}></canvas>
     </div>
   );

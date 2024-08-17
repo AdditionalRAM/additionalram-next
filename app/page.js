@@ -55,7 +55,7 @@ export default async function Home() {
     <main>
       <AccessibleHeading text="AdditionalRAM's Portfolio" level={1} />
       <section id="hero" className={styles.hero}>
-        <ThreeCRT elementID="threecrt" />
+        <ThreeCRT elementID="threecrt" obeyParentContainer={false} />
         <RotatingIcons elements={smIcons} centerSelector="#threecrt" radiusVW={16} speed={10} iconClass="socialMediaIcons" uniqueID="herosm" />
         <AccessibleHeading text="AdditionalRAM" level={1} />
         <GlitchyText text="AdditionalRAM" fontClassName={silkscreen.className} />
