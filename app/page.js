@@ -10,6 +10,7 @@ import TechStack from "./components/TechStack";
 import TravellingIcon from "./components/TravellingIcon";
 import ProjectsMember from "./components/ProjectsMember";
 import ProjectsGrid from "./components/ProjectsGrid";
+import GlitchyText from "./components/GlitchyText";
 
 const silkscreen = Silkscreen({ subsets: ["latin"], weight: '400' });
 
@@ -53,9 +54,12 @@ export default async function Home() {
   return (
     <main>
       <AccessibleHeading text="AdditionalRAM's Portfolio" level={1} />
-      <section id="hero" style={{height: "100vh"}}>
+      <section id="hero" className={styles.hero}>
         <ThreeCRT elementID="threecrt" />
-        <RotatingIcons elements={smIcons} centerSelector="#threecrt" radiusVW={20} speed={10} iconClass="socialMediaIcons" uniqueID="herosm" />
+        <RotatingIcons elements={smIcons} centerSelector="#threecrt" radiusVW={16} speed={10} iconClass="socialMediaIcons" uniqueID="herosm" />
+        <AccessibleHeading text="AdditionalRAM" level={1} />
+        <GlitchyText text="AdditionalRAM" fontClassName={silkscreen.className} />
+        <GlitchyText text="Web and Game Developer" fontClassName={silkscreen.className} extraClassName={styles.bottomTitle} />
       </section>
       <section id="web-development" className={styles.spaceTop}>
         <OrbittingText iconURL="/icons/globe.svg" textToRotate="WEB-DEVELOPMENT-" rotateSpeed={10} elementID="web-development-orbit" />

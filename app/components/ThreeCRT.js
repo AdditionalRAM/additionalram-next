@@ -33,9 +33,9 @@ export default function ThreeCRT({ elementID }) {
 
       // Optionally adjust camera field of view based on screen size
       const screenWidth = window.innerWidth;
-      if (screenWidth < 600) {
-        camera.fov = 40; // More zoomed in on small screens
-      } else if (screenWidth < 900) {
+      if (screenWidth < 800) {
+        camera.fov = 45; // More zoomed in on small screens
+      } else if (screenWidth < 1200) {
         camera.fov = 30; // Medium zoom for tablets/smaller desktops
       } else {
         camera.fov = 25; // Default zoom for larger screens

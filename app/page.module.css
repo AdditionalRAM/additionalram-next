@@ -1,3 +1,13 @@
+.hero{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
 .socialLink{
   width: min(5vw, 2em);
   height: min(5vw, 2em);
