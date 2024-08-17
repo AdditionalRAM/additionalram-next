@@ -1,9 +1,14 @@
 "use client";
 
+import { useState, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import styles from "./Header.module.css";
 import { Nunito, Silkscreen } from "next/font/google";
-import React, { useState, useEffect } from "react";
 import ThreeCRT from "./ThreeCRT";
+
+// Register the ScrollToPlugin
+gsap.registerPlugin(ScrollToPlugin);
 
 const nunito = Nunito({ subsets: ["latin"], weight: "400" });
 const silkscreen = Silkscreen({ subsets: ["latin"], weight: "400" });
@@ -24,6 +29,38 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const headerHeight = document.querySelector("header")?.offsetHeight || 0;
+
+    const handleSmoothScroll = (event) => {
+      event.preventDefault();
+      const targetId = event.currentTarget.getAttribute("href");
+      const targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+        gsap.to(window, {
+          scrollTo: {
+            y: targetElement.offsetTop - headerHeight,
+            offsetY: headerHeight * 1.3,
+          },
+          duration: 0.4,
+          ease: "power2.out", // easing
+        });
+      }
+    };
+
+    const links = document.querySelectorAll("nav a[href^='#']");
+    links.forEach((link) => {
+      link.addEventListener("click", handleSmoothScroll);
+    });
+
+    return () => {
+      links.forEach((link) => {
+        link.removeEventListener("click", handleSmoothScroll);
+      });
+    };
   }, []);
 
   return (
