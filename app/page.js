@@ -96,6 +96,23 @@ export default async function Home() {
         <h2 className={`${styles.heading} ${silkscreen.className}`}>My Projects</h2>
         <ProjectsGrid projects={gameProjects} elementID="game-projects-grid" />
       </section>
+      <section id="imprint" className={styles.spaceTop}>
+        <AccessibleHeading text="Impressum" level={1} />
+        <GlitchyText text="IMPRESSUM AND LEGAL STUFF" fontClassName={silkscreen.className} />
+        <div className={styles.paragraphHolder}>
+          <p className={styles.paragraph}>Website made by Ekrem Taha SENER</p>
+          <p className={styles.paragraph}>This website is a personal portfolio and is not intended for commercial purposes.</p>
+          <p className={styles.paragraph}>The content of this website reflects the personal work and opinions of Ekrem Taha SENER and is maintained by:</p>
+          <p className={styles.paragraph}>Sener Engineering GmbH</p>
+          <p className={styles.paragraph}>c/o Next Level Offices, Franklinstraße 11, 10587 Berlin</p>
+          <p className={styles.paragraph}>BSc (Ing.) Semih SENER</p>
+          <p className={styles.paragraph}>Email: info@sener.ai</p>
+          <p className={styles.paragraph}>Registration: District Court Charlottenburg HRB 249792B</p>
+          <p className={styles.paragraph}>VAT ID: DE 36 0 36 10 40</p>
+          <p className={styles.paragraph}>This page doesn't collect any user data or use cookies. Made with Next.js</p>
+
+        </div>
+      </section>
     </main>
   );
 }
