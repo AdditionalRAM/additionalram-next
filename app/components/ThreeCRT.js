@@ -31,8 +31,6 @@ export default function ThreeCRT({ elementID, obeyParentContainer, crtSize }) {
         height = screenWidth;
         camera.fov = 45;
       } else if (screenWidth < 1200) {
-        width = screenWidth * 0.6;
-        height = screenWidth * 0.6;
         camera.fov = 30;
       } else {
         camera.fov = 25;

@@ -4,7 +4,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import styles from './RotatingIcons.module.css';
 import gsap from 'gsap';
 
-export default function RotatingIcons({ elements, centerSelector, radiusVW, speed, iconClass, uniqueID }) {
+export default function RotatingIcons({ elements, centerSelector, radiusVW, smallScreenRadiusVW, speed, iconClass, uniqueID }) {
   const [radiusPx, setRadiusPx] = useState(0);
   const [centerPos, setCenterPos] = useState({ x: 0, y: 0 });
   const angleStep = (2 * Math.PI) / elements.length;
@@ -13,9 +13,10 @@ export default function RotatingIcons({ elements, centerSelector, radiusVW, spee
 
   useEffect(() => {
     const updateRadiusPx = () => {
-      // Convert vw to pixels
+      let screenWidth = window.innerWidth;
+      let wantedRadiusVW = screenWidth < 800 ? smallScreenRadiusVW : radiusVW;
       const vw = window.innerWidth / 100;
-      setRadiusPx(radiusVW * vw);
+      setRadiusPx(wantedRadiusVW * vw);
     };
 
     const updateCenterPosition = () => {
