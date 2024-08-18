@@ -15,3 +15,7 @@ body{
 section{
   min-height: 100vh;
 }
+
+section:not(:first-of-type){
+  margin-top: 15vh;
+}
