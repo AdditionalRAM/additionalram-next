@@ -80,7 +80,7 @@ export default async function Home() {
       </section>
       <section id="web-development">
         <OrbittingText iconURL="/icons/globe.svg" textToRotate="WEB-DEVELOPMENT-" rotateSpeed={10} elementID="web-development-orbit" />
-        <RotatingIcons elements={webStackIcons} centerSelector="#web-development-orbit" radiusVW={20} speed={10} iconClass="webDevOrbit" uniqueID="webdev" />
+        <RotatingIcons elements={webStackIcons} centerSelector="#web-development-orbit" radiusVW={20} smallScreenRadiusVW={40}  speed={10} iconClass="webDevOrbit" uniqueID="webdev" />
         <AccessibleHeading text="Web Development" level={1} />
         <h2 className={`${styles.heading} ${silkscreen.className}`}>My Skills</h2>
         <TechStack dataset={webStack} />
@@ -90,7 +90,7 @@ export default async function Home() {
       <section id="game-development" className={styles.spaceTop}>
         <OrbittingText iconURL="/icons/game-controller.svg" textToRotate="GAME-DEVELOPMENT-" rotateSpeed={10} elementID="game-development-orbit" />
         <AccessibleHeading text="Game Development" level={1} />
-        <RotatingIcons elements={gameStackIcons} centerSelector="#game-development-orbit" radiusVW={20} speed={10} iconClass="gameDevOrbit" uniqueID="gamedev" />
+        <RotatingIcons elements={gameStackIcons} centerSelector="#game-development-orbit" radiusVW={20} smallScreenRadiusVW={40} speed={10} iconClass="gameDevOrbit" uniqueID="gamedev" />
         <h2 className={`${styles.heading} ${silkscreen.className}`}>My Skills</h2>
         <TechStack dataset={gameStack} />
         <h2 className={`${styles.heading} ${silkscreen.className}`}>My Projects</h2>

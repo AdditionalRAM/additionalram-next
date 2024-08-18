@@ -85,3 +85,10 @@ a.socialLink:hover img {
   align-items: center;
   flex-wrap: wrap;
 }
+
+@media (max-width: 800px){
+  .socialLink{
+    width: 2em;
+    height: 2em;
+  }
+}

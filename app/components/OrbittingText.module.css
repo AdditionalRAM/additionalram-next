@@ -29,3 +29,14 @@
   transform-style: preserve-3d;
   transform-origin: 0 0;
 }
+
+/* screen width <800 */
+@media (max-width: 800px){
+  .orbitParent{
+    width: 50vw;
+    height: 50vw;
+  }
+  .rotatingLetter{
+    font-size: 3em;
+  }
+}
