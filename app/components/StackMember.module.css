@@ -67,7 +67,9 @@
 
 }
 
-.container:hover .learntAtDivider{
+.container:hover .learntAtDivider,
+.container:focus-within .learntAtDivider
+{
   width: auto;
   height: 4em;
 }
@@ -110,24 +112,24 @@
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.05);
 }
 
-.container:hover{
+.container:hover, .container:focus-within{
   height: 12em;
 }
 
-.container:hover .description {
+.container:hover .description, .container:focus-within .description {
   height: 4em;
 }
 
-.container:hover .flexContainer {
+.container:hover .flexContainer, .container:focus-within .flexContainer {
   height: 5em;
 }
 
-.container:hover .iconHolder {
+.container:hover .iconHolder, .container:focus-within .iconHolder {
   height: 4em;
   width: 4em;
 }
 
-.container:hover .learntAtIconHolder {
+.container:hover .learntAtIconHolder, .container:focus-within .learntAtIconHolder {
   /* element is no longer part of flexbox */
   /* position it at bottom right of container */
   position: absolute;
@@ -136,7 +138,7 @@
   height: 4em;
 }
 
-.container:hover .title{
+.container:hover .title, .container:focus-within .title {
   font-size: 1.5em;
   text-align: right;
   color: var(--main-color);
