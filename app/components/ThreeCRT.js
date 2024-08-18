@@ -21,27 +21,29 @@ export default function ThreeCRT({ elementID, obeyParentContainer, crtSize }) {
     });
 
     const updateRendererAndCameraSize = () => {
-      const width = window.innerWidth * 0.3;
-      const height = window.innerHeight * 0.3;
-
-      // Adjust renderer size
-      renderer.setSize(width, height);
-
-      // Adjust camera properties
-      camera.aspect = width / height;
-      camera.updateProjectionMatrix();
-
-      // Optionally adjust camera field of view based on screen size
       const screenWidth = window.innerWidth;
+
+      let width = screenWidth * 0.3;
+      let height = window.innerHeight * 0.3;
+
       if (screenWidth < 800) {
-        camera.fov = 45; // More zoomed in on small screens
+        width = screenWidth;
+        height = screenWidth;
+        camera.fov = 45;
       } else if (screenWidth < 1200) {
-        camera.fov = 30; // Medium zoom for tablets/smaller desktops
+        width = screenWidth * 0.6;
+        height = screenWidth * 0.6;
+        camera.fov = 30;
       } else {
-        camera.fov = 25; // Default zoom for larger screens
+        camera.fov = 25;
       }
       camera.updateProjectionMatrix();
+      renderer.setSize(width, height);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
     };
+
+
 
     renderer.setPixelRatio(window.devicePixelRatio);
     updateRendererAndCameraSize();
