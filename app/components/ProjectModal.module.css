@@ -6,7 +6,7 @@
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
+  z-index: 2000;
   overflow-y: auto;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.05);
 }
@@ -46,7 +46,7 @@
   right: 2vw;
   filter: invert(1);
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.05);
-  z-index: 1002;
+  z-index: 2002;
 }
 
 .modalClose:hover{
@@ -310,3 +310,71 @@
   transform: translateY(-250%);
 }
 
+@media (max-width: 800px){
+  .modalContent{
+    border-radius: 7vw;
+    margin-top: 12vh;
+  }
+
+  .verticalSectionHolder{
+    flex-direction: column;
+    align-items: center;
+  }
+  .verticalSection{
+    width: 90% !important;
+    margin-left: 2vw !important;
+  }
+
+  .modalImageHolder{
+    width: 100%;
+    aspect-ratio: 1/1;
+    height: auto;
+    margin-top: 2vw;
+    border-radius: 5vw;
+  }
+  
+  .techStackHolder{
+    width: 100%;
+    margin: 2vw 0;
+  }
+
+  .projectTitle{
+    font-size: 2em;
+  }
+
+  .individualImageHolder{
+    height: 40vw;
+    aspect-ratio: 15 / 8;
+    margin-right: 2vw;
+    margin: 10px;
+  }
+
+  .linksHolder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .link{
+    width:80%;
+  }
+  .linkIcon{
+    height: 50%;
+  }
+  .link:hover .linkIcon{
+    transform: translateY(-50%) translateX(50%);
+  }
+  .linkText{
+    font-size: 1em;
+  }
+  .link:hover .linkText{
+    transform: translateY(-3.7em);
+  }
+
+  .modalClose{
+    width: 20vw;
+    height: 20vw;
+    top: 2vw;
+    right: 2vw;
+  }
+}
