@@ -70,8 +70,6 @@ export default function Header() {
 
       let newCrtSize = screenWidth < 800 ? 16 : 8;
       setCrtSize(newCrtSize);
-
-      console.log("Resized da crt to", newCrtSize, crtSize, "for a screen the width of", screenWidth);
     }
 
     window.addEventListener("resize", handleResize);

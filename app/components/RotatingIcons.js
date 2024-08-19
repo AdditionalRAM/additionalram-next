@@ -6,7 +6,7 @@ import gsap from 'gsap';
 
 export default function RotatingIcons({ elements, centerSelector, radiusVW, smallScreenRadiusVW, speed, iconClass, uniqueID }) {
   const [radiusPx, setRadiusPx] = useState(0);
-  const [centerPos, setCenterPos] = useState({ x: 0, y: 0 });
+  const [centerPos, setCenterPos] = useState({ x: 0, y: 0 }); // Keeping centerPos for future use
   const angleStep = (2 * Math.PI) / elements.length;
   const rotateAnimationRef = useRef(null);
   const mousePos = useRef({ x: 0, y: 0 });
@@ -14,7 +14,7 @@ export default function RotatingIcons({ elements, centerSelector, radiusVW, smal
   useEffect(() => {
     const updateRadiusPx = () => {
       let screenWidth = window.innerWidth;
-      let wantedRadiusVW = screenWidth < 800 ? smallScreenRadiusVW : radiusVW;
+      let wantedRadiusVW = screenWidth < 790 ? smallScreenRadiusVW : radiusVW;
       const vw = window.innerWidth / 100;
       setRadiusPx(wantedRadiusVW * vw);
     };
@@ -31,8 +31,7 @@ export default function RotatingIcons({ elements, centerSelector, radiusVW, smal
     };
 
     updateRadiusPx();
-    updateCenterPosition();
-    window.addEventListener('scroll', updateCenterPosition);
+    updateCenterPosition(); // Ensure centerPos is updated
     window.addEventListener('resize', () => {
       updateRadiusPx();
       updateCenterPosition();
@@ -55,7 +54,6 @@ export default function RotatingIcons({ elements, centerSelector, radiusVW, smal
     window.addEventListener('mousemove', handleMouseMove);
 
     return () => {
-      window.removeEventListener('scroll', updateCenterPosition);
       window.removeEventListener('resize', updateCenterPosition);
       window.removeEventListener('mousemove', handleMouseMove);
       rotateAnimationRef.current?.kill();
@@ -102,12 +100,7 @@ export default function RotatingIcons({ elements, centerSelector, radiusVW, smal
     <div
       className={styles.centerer}
       style={{
-        position: 'absolute',
-        top: `${centerPos.y}px`,
-        left: `${centerPos.x}px`,
-        width: `${radiusPx * 2}px`,
-        height: `${radiusPx * 2}px`,
-        transform: 'translate(-50%, -50%)',
+        top: `${centerPos.y}px`, // Tracking centerPos without using it for positioning
       }}
     >
       <div className={styles.container} id={`${uniqueID}-container`}>
@@ -121,9 +114,8 @@ export default function RotatingIcons({ elements, centerSelector, radiusVW, smal
               key={i}
               className={`${styles.icon} ${styles[uniqueID]}-${iconClass}`}
               style={{
-                position: 'absolute',
-                left: `${radiusPx + x}px`,
-                top: `${radiusPx + y}px`,
+                left: `calc(50% + ${x}px)`,
+                top: `calc(50% + ${y}px)`,
                 transform: 'translate(-50%, -50%)',
               }}
             >
