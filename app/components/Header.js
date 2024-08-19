@@ -15,6 +15,7 @@ const silkscreen = Silkscreen({ subsets: ["latin"], weight: "400" });
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(false);
+  const [crtSize, setCrtSize] = useState(8);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,11 +64,26 @@ export default function Header() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+
+      let newCrtSize = screenWidth < 800 ? 16 : 8;
+      setCrtSize(newCrtSize);
+
+      console.log("Resized da crt to", newCrtSize, crtSize, "for a screen the width of", screenWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <header className={`${styles.header} ${!isVisible ? styles.hide : ""}`} id="header">
       <nav className={styles.nav}>
         <a href="#hero" className={styles.crtHolder} id="header-crt-holder">
-          <ThreeCRT elementID="header-crt" obeyParentContainer={true} crtSize={4} />
+          <ThreeCRT elementID="header-crt" obeyParentContainer={true} crtSize={crtSize} />
         </a>
         <a href="#about" className={`${silkscreen.className} ${styles.navLink}`}>
           About

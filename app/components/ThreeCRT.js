@@ -9,6 +9,7 @@ import React, { useEffect, useRef } from 'react';
 export default function ThreeCRT({ elementID, obeyParentContainer, crtSize }) {
   const canvasRef = useRef(null);
   const crtRef = useRef(null);
+  const canvasContainerRef = useRef(null);
   const mousePos = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -22,6 +23,7 @@ export default function ThreeCRT({ elementID, obeyParentContainer, crtSize }) {
 
     const updateRendererAndCameraSize = () => {
       const screenWidth = window.innerWidth;
+      const screenHeight = window.innerHeight;
 
       let width = screenWidth * 0.3;
       let height = window.innerHeight * 0.3;
@@ -35,9 +37,17 @@ export default function ThreeCRT({ elementID, obeyParentContainer, crtSize }) {
       } else {
         camera.fov = 25;
       }
+
       camera.updateProjectionMatrix();
       renderer.setSize(width, height);
       camera.aspect = width / height;
+      
+      if(obeyParentContainer){
+        let parentRect = canvasContainerRef.current.getBoundingClientRect();
+        renderer.setSize(parentRect.width, parentRect.height);
+        camera.aspect = parentRect.width / parentRect.height;
+        camera.fov = 30;
+      }
       camera.updateProjectionMatrix();
     };
 
@@ -123,7 +133,7 @@ export default function ThreeCRT({ elementID, obeyParentContainer, crtSize }) {
   }, []);
 
   return (
-    <div className={obeyParentContainer ? styles.obeyCanvasContainer : styles.canvasContainer} id={elementID}>
+    <div className={obeyParentContainer ? styles.obeyCanvasContainer : styles.canvasContainer} id={elementID} ref={canvasContainerRef}>
       <canvas ref={canvasRef} id="bg" className={styles.canvas}></canvas>
     </div>
   );

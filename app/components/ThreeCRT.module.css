@@ -9,6 +9,12 @@
   align-items: center;
 }
 
+.obeyCanvasContainer{
+  width: 100%;
+  height: 100%;
+  
+}
+
 .canvas{
   pointer-events: none;
   z-index: 0;
