@@ -11,7 +11,7 @@
   height: min(20vw, 250px);
   position: relative;
   overflow: hidden;
-  border-radius: 5vw;
+  border-radius: 3vw;
   /* shadow */
   box-shadow: 0 0 10px white;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.05);
@@ -44,11 +44,39 @@
 .projectHolder:hover .imageHolder{
   transform: scale(1.05) translateY(-5%);
   box-shadow: 2px 2px 10px white;
-  border-radius: 3vw;
+  border-radius: 2vw;
 }
+
+.projectHolder:active .imageHolder{
+  transform: scale(0.95) translateY(0%);
+  box-shadow: 2px 2px 10px white;
+  border-radius: 2vw;
+}
+
 
 .projectHolder:hover .title{
   text-shadow: 1px 1px 3px white;
   transform: scale(1.1);
   color: #00FF41;
+}
+.projectHolder:active .title{
+  transform: scale(0.95);
+  color: #00FF41;
+}
+
+@media (max-width: 800px){
+  .projectHolder{
+    width: 40vw;
+    margin: 5vw;
+  }
+  .imageHolder{
+    height: 40vw;
+    border-radius: 10vw;
+  }
+  .projectHolder:hover .imageHolder{
+    border-radius: 5vw;
+  }
+  .title{
+    font-size: 5vw;
+  }
 }
