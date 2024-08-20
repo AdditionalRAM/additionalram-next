@@ -70,7 +70,7 @@ export default function GlitchyText({ text, fontClassName, extraClassName }) {
   }, [text]);
 
   return (
-    <p ref={textRef} className={`${extraClassName | ""} ${fontClassName} ${styles.glitchyText}`}>
+    <p ref={textRef} className={`${extraClassName || ""} ${fontClassName} ${styles.glitchyText}`}>
       {displayText}
     </p>
   );

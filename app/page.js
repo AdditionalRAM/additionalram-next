@@ -63,7 +63,8 @@ export default async function Home() {
         <GlitchyText text="Web and Game Developer" fontClassName={silkscreen.className} extraClassName={styles.bottomTitle} />
       </section>
       <section id="about">
-        <h2 className={`${styles.heading} ${silkscreen.className}`}>About Me</h2>
+        <AccessibleHeading text="About Me" level={2} />
+        <GlitchyText text="About Me" fontClassName={silkscreen.className} extraClassName={styles.heading} />
         <div className={styles.paragraphHolder}>
           <AnimatedParagraph>Hey there! I'm Taha.</AnimatedParagraph>
           <AnimatedParagraph>I'm a self-taught web and game developer based in Berlin, Germany.</AnimatedParagraph>
@@ -83,18 +84,22 @@ export default async function Home() {
         <OrbittingText iconURL="/icons/globe.svg" textToRotate="WEB-DEVELOPMENT-" rotateSpeed={10} elementID="web-development-orbit" />
         <RotatingIcons elements={webStackIcons} centerSelector="#web-development-orbit" radiusVW={20} smallScreenRadiusVW={40}  speed={10} iconClass="webDevOrbit" uniqueID="webdev" />
         <AccessibleHeading text="Web Development" level={1} />
-        <h2 className={`${styles.heading} ${silkscreen.className}`}>My Skills</h2>
+        <AccessibleHeading text="My Skills" level={2} />
+        <GlitchyText text="My Skills" fontClassName={silkscreen.className} extraClassName={styles.heading} />
         <TechStack dataset={webStack} />
-        <h2 className={`${styles.heading} ${silkscreen.className}`}>My Projects</h2>
+        <AccessibleHeading text="My Projects" level={2} />
+        <GlitchyText text="My Projects" fontClassName={silkscreen.className} extraClassName={styles.heading} />
         <ProjectsGrid projects={webProjects} elementID="web-projects-grid" />
       </section>
       <section id="game-development" className={styles.spaceTop}>
         <OrbittingText iconURL="/icons/game-controller.svg" textToRotate="GAME-DEVELOPMENT-" rotateSpeed={10} elementID="game-development-orbit" />
         <AccessibleHeading text="Game Development" level={1} />
         <RotatingIcons elements={gameStackIcons} centerSelector="#game-development-orbit" radiusVW={20} smallScreenRadiusVW={40} speed={10} iconClass="gameDevOrbit" uniqueID="gamedev" />
-        <h2 className={`${styles.heading} ${silkscreen.className}`}>My Skills</h2>
+        <AccessibleHeading text="My Skills" level={2} />
+        <GlitchyText text="My Skills" fontClassName={silkscreen.className} extraClassName={styles.heading} />
         <TechStack dataset={gameStack} />
-        <h2 className={`${styles.heading} ${silkscreen.className}`}>My Projects</h2>
+        <AccessibleHeading text="My Projects" level={2} />
+        <GlitchyText text="My Projects" fontClassName={silkscreen.className} extraClassName={styles.heading} />
         <ProjectsGrid projects={gameProjects} elementID="game-projects-grid" />
       </section>
       <section id="imprint" className={styles.spaceTop}>
