@@ -47,7 +47,7 @@ export default function Header() {
             offsetY: headerHeight * 1.3,
           },
           duration: 0.4,
-          ease: "power2.out", // easing
+          ease: "power2.inOut", // easing
         });
       }
     };
