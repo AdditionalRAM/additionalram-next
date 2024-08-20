@@ -6,7 +6,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import React, { useEffect, useRef } from 'react';
 
-export default function ThreeCRT({ elementID, obeyParentContainer, crtSize }) {
+export default function ThreeCRT({ elementID, obeyParentContainer, crtSize, onLoadComplete }) {
   const canvasRef = useRef(null);
   const crtRef = useRef(null);
   const canvasContainerRef = useRef(null);
@@ -73,7 +73,10 @@ export default function ThreeCRT({ elementID, obeyParentContainer, crtSize }) {
         crtRef.current = loadedCrt;
       },
       (xhr) => {
-        console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+        // console.log((xhr.loaded / 17728) * 100 + '% loaded');
+        if(xhr.loaded >= 17728 && onLoadComplete){
+          onLoadComplete();
+        }
       },
       (error) => {
         console.error(error);
