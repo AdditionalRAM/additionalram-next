@@ -15,7 +15,6 @@
 }
 
 .completedLoading {
-  opacity: 0;
   pointer-events: none;
   transform: translateY(-100%);
 }

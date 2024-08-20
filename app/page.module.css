@@ -32,7 +32,7 @@ a.socialLink img{
 }
 
 a.socialLink:hover img {
-  filter: invert(69%) sepia(61%) saturate(5400%) hue-rotate(99deg) brightness(122%) contrast(113%);
+  filter: invert(59%) sepia(94%) saturate(1844%) hue-rotate(89deg) brightness(114%) contrast(110%);
 }
 
 .invert{
