@@ -9,6 +9,7 @@
 
 
 .socialLink{
+  pointer-events: all;
   width: min(5vw, 2em);
   height: min(5vw, 2em);
   margin: 0.5em;
