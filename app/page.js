@@ -11,6 +11,7 @@ import TravellingIcon from "./components/TravellingIcon";
 import ProjectsMember from "./components/ProjectsMember";
 import ProjectsGrid from "./components/ProjectsGrid";
 import GlitchyText from "./components/GlitchyText";
+import AnimatedParagraph from "./components/AnimatedParagraph";
 
 const silkscreen = Silkscreen({ subsets: ["latin"], weight: '400' });
 
@@ -64,15 +65,15 @@ export default async function Home() {
       <section id="about">
         <h2 className={`${styles.heading} ${silkscreen.className}`}>About Me</h2>
         <div className={styles.paragraphHolder}>
-          <p className={styles.paragraph}>Hey there! I'm Taha.</p>
-          <p className={styles.paragraph}>I'm a self-taught web and game developer based in Berlin, Germany.</p>
-          <p className={styles.paragraph}>I've been actively learning by myself since 2018, but my love for programming started all the way back in primary school.</p>
-          <p className={styles.paragraph}>Recently, I've had the incredible opportunity to intern for two weeks at <a className={styles.paragraphLink} href="https://foodforthoughtmedia.com/" target="_blank">Food for Thought Media</a> & <a className={styles.paragraphLink} href="https://madaboutpandas.de/" target="_blank">Mad About Pandas</a>.</p>
-          <p className={styles.paragraph}>During this internship, I was able to demonstrate my skills in game development with state machines in Unity and C# and learn a lot about the game design process.</p>
-          <p className={styles.paragraph}>It was also there that I discovered my passion for web development after working on a web-based game.</p>
-          <p className={styles.paragraph}>This internship is not the only thing I've been doing.</p>
-          <p className={styles.paragraph}>Scroll down to see what technologies I've learned by myself and the projects I've put them to use in!</p>
-          <p className={styles.paragraph}>Contact me at:</p>
+          <AnimatedParagraph>Hey there! I'm Taha.</AnimatedParagraph>
+          <AnimatedParagraph>I'm a self-taught web and game developer based in Berlin, Germany.</AnimatedParagraph>
+          <AnimatedParagraph>I've been actively learning by myself since 2018, but my love for programming started all the way back in primary school.</AnimatedParagraph>
+          <AnimatedParagraph>In February 2023, I had the incredible opportunity to intern for two weeks at <a className={styles.paragraphLink} href="https://foodforthoughtmedia.com/" target="_blank">Food for Thought Media</a> & <a className={styles.paragraphLink} href="https://madaboutpandas.de/" target="_blank">Mad About Pandas</a>.</AnimatedParagraph>
+          <AnimatedParagraph>During this internship, I was able to demonstrate my skills in game development with state machines in Unity and C# and learn a lot about the game design process.</AnimatedParagraph>
+          <AnimatedParagraph>It was also there that I discovered my passion for web development after working on a web-based game.</AnimatedParagraph>
+          <AnimatedParagraph>This internship is not the only thing I've been doing.</AnimatedParagraph>
+          <AnimatedParagraph>Scroll down to see what technologies I've learned by myself and the projects I've put them to use in!</AnimatedParagraph>
+          <AnimatedParagraph>Contact me at:</AnimatedParagraph>
         </div>
         <div className={styles.smLinksHolder}>
           {smIcons}
@@ -100,16 +101,16 @@ export default async function Home() {
         <AccessibleHeading text="Impressum" level={1} />
         <GlitchyText text="IMPRESSUM AND LEGAL STUFF" fontClassName={silkscreen.className} />
         <div className={styles.paragraphHolder}>
-          <p className={styles.paragraph}>Website made by Ekrem Taha SENER</p>
-          <p className={styles.paragraph}>This website is a personal portfolio and is not intended for commercial purposes.</p>
-          <p className={styles.paragraph}>The content of this website reflects the personal work and opinions of Ekrem Taha SENER and is maintained by:</p>
-          <p className={styles.paragraph}>Sener Engineering GmbH</p>
-          <p className={styles.paragraph}>c/o Next Level Offices, Franklinstraße 11, 10587 Berlin</p>
-          <p className={styles.paragraph}>Managing Director: BSc (Ing.) Semih SENER</p>
-          <p className={styles.paragraph}>Email: semih@sener.ai</p>
-          <p className={styles.paragraph}>Registration: District Court Charlottenburg HRB 249792B</p>
-          <p className={styles.paragraph}>VAT ID: DE 36 0 36 10 40</p>
-          <p className={styles.paragraph}>This page doesn't collect any user data or use cookies. All copyrighted logos and trademarks belong to their respective owners. "AdditionalRAM" is the username / alias Ekrem Taha SENER goes by and is not a trademark.</p>
+          <AnimatedParagraph>Website made by Ekrem Taha SENER</AnimatedParagraph>
+          <AnimatedParagraph>This website is a personal portfolio and is not intended for commercial purposes.</AnimatedParagraph>
+          <AnimatedParagraph>The content of this website reflects the personal work and opinions of Ekrem Taha SENER and is maintained by:</AnimatedParagraph>
+          <AnimatedParagraph>Sener Engineering GmbH</AnimatedParagraph>
+          <AnimatedParagraph>c/o Next Level Offices, Franklinstraße 11, 10587 Berlin</AnimatedParagraph>
+          <AnimatedParagraph>Managing Director: BSc (Ing.) Semih SENER</AnimatedParagraph>
+          <AnimatedParagraph>Email: semih@sener.ai</AnimatedParagraph>
+          <AnimatedParagraph>Registration: District Court Charlottenburg HRB 249792B</AnimatedParagraph>
+          <AnimatedParagraph>VAT ID: DE 36 0 36 10 40</AnimatedParagraph>
+          <AnimatedParagraph>This page doesn't collect any user data or use cookies. All copyrighted logos and trademarks belong to their respective owners. "AdditionalRAM" is the username / alias Ekrem Taha SENER goes by and is not a trademark.</AnimatedParagraph>
 
         </div>
       </section>
