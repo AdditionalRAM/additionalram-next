@@ -10,6 +10,7 @@ const silkscreen = Silkscreen({ subsets: ["latin"], weight: '400' });
 export default function ProjectModal({ show, project, onClose }) {
   let formattedTitle = project.title.replace(/\./g, "\u200B.");
   let modalContentRef = useRef(null);
+  let modalBackdropRef = useRef(null);
 
   // useEffect(() => {
   //   if (modalContentRef.current) {
@@ -22,6 +23,10 @@ export default function ProjectModal({ show, project, onClose }) {
     // prevents scrolling when modal is open
     if (show) {
       document.documentElement.style.overflow = 'hidden';
+
+      if (modalBackdropRef.current) {
+        modalBackdropRef.current.scrollTop = 0;
+      }
     } else {
       document.documentElement.style.overflow = ''; 
     }
@@ -39,7 +44,7 @@ export default function ProjectModal({ show, project, onClose }) {
 
   // whoa this HTML is complicated
   return (
-    <div className={`${styles.modalBackdrop} ${show ? "" : styles.hidden}`} onClick={handleBackdropClick}>
+    <div className={`${styles.modalBackdrop} ${show ? "" : styles.hidden}`} onClick={handleBackdropClick} ref={modalBackdropRef}>
       <button className={styles.modalClose} onClick={onClose}><img src="/icons/close-outline.svg" alt="Close" /></button>
       <div className={styles.modalContent} ref={modalContentRef}>
         <div className={styles.verticalSectionHolder}>
