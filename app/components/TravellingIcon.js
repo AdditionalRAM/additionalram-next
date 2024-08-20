@@ -19,6 +19,7 @@ export default function TravellingIcon({
   imgAlt,
 }) {
   const iconRef = useRef(null);
+  const animationRef = useRef(null);
 
   useEffect(() => {
     const iconElement = iconRef.current;
@@ -31,6 +32,7 @@ export default function TravellingIcon({
     const moveToParent = (targetParent) => {
       if (targetParent.contains(iconElement)) return;
 
+      // Get current position before moving the element
       const fromRect = iconElement.getBoundingClientRect();
       targetParent.appendChild(iconElement);
       const toRect = iconElement.getBoundingClientRect();
@@ -38,15 +40,19 @@ export default function TravellingIcon({
       const deltaX = fromRect.left - toRect.left;
       const deltaY = fromRect.top - toRect.top;
 
+      // Kill any ongoing animation
+      if (animationRef.current) {
+        animationRef.current.kill();
+      }
+
+      // Set the initial position and animate to the final position
       gsap.set(iconElement, { x: deltaX, y: deltaY });
 
-
-
-      gsap.to(iconElement, {
+      animationRef.current = gsap.to(iconElement, {
         x: 0,
         y: 0,
         duration: travelDuration || 0.5,
-        ease: CustomEase.create("customEase", "0.175, 0.885, 0.32, 1.05"),
+        ease: CustomEase.create("customEase", "0.175, 0.885, 0.32, 1.0"),
       });
     };
 
@@ -65,6 +71,9 @@ export default function TravellingIcon({
     // cleanup on unmount
     return () => {
       ScrollTrigger.killAll();
+      if (animationRef.current) {
+        animationRef.current.kill();
+      }
     };
   }, [iconID, travelFromID, travelToID, travelDuration]);
 
