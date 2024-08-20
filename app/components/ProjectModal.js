@@ -18,6 +18,19 @@ export default function ProjectModal({ show, project, onClose }) {
   //   }
   // }, [project]);
 
+  useEffect(() => {
+    // prevents scrolling when modal is open
+    if (show) {
+      document.documentElement.style.overflow = 'hidden';
+    } else {
+      document.documentElement.style.overflow = ''; 
+    }
+
+    return () => {
+      document.documentElement.style.overflow = '';
+    }
+  }, [show]);
+
   const handleBackdropClick = (e) => {
     if (e.target === e.currentTarget) {
       onClose();

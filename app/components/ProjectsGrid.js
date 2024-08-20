@@ -37,7 +37,7 @@ export default function ProjectsGrid({ projects, elementID }) {
           stagger: 0.1,
           scrollTrigger: {
             trigger: gridRef.current,
-            start: "top 80%", // Adjust as needed
+            start: "top 80%", 
             end: "bottom top",
             scrub: false,
             toggleActions: "play none none reverse",
