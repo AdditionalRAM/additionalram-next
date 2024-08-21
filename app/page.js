@@ -37,7 +37,7 @@ export default async function Home() {
   const webStack = await fetchLocalJson("web-stack");
 
   const webStackIcons = webStack.map((data, index) => (
-    <div id={`${data.title}-${index}-holder`} className={styles.socialLink}>
+    <div id={`${data.title}-${index}-holder`} className={styles.socialLink} key={index}>
       <TravellingIcon key={data.title} iconURL={data.imageURL} iconID={`${data.title}-icon`} shouldInvert={data.invertLogo} travelFromID={`${data.title}-${index}-holder`} travelToID={`${data.title}-stack-member-icon`} travelDuration={0.7} imgAlt={data.title} />
     </div>
   ));
@@ -47,7 +47,7 @@ export default async function Home() {
   const gameStack = await fetchLocalJson("game-stack");
 
   const gameStackIcons = gameStack.map((data, index) => (
-    <div id={`${data.title}-${index}-holder`} className={styles.socialLink}>
+    <div id={`${data.title}-${index}-holder`} className={styles.socialLink} key={index}>
       <TravellingIcon key={data.title} iconURL={data.imageURL} iconID={`${data.title}-icon`} shouldInvert={data.invertLogo} travelFromID={`${data.title}-${index}-holder`} travelToID={`${data.title}-stack-member-icon`} travelDuration={0.7} imgAlt={data.title} />
     </div>
   ));
