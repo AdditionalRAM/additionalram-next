@@ -15,18 +15,16 @@ import AnimatedParagraph from "./components/AnimatedParagraph";
 import ThreeLoadManager from "./components/ThreeLoadManager";
 import GalaxyBackground from "./components/GalaxyBackground";
 
+import externalLinks from "../public/json/external-links.json";
+import webStack from "../public/json/web-stack.json";
+import webProjects from "../public/json/web-projects.json";
+import gameStack from "../public/json/game-stack.json";
+import gameProjects from "../public/json/game-projects.json";
+
 const silkscreen = Silkscreen({ subsets: ["latin"], weight: '400' });
 
-async function fetchLocalJson(filename) {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/json/${filename}.json`);  
-  const data = await response.json();
-  return data;
-}
 
 export default async function Home() {
-
-  // await externalLinks and parse JSON into array
-  const externalLinks = await fetchLocalJson("external-links");
 
   const smIcons = externalLinks.map((link) => (
     <a href={link.link} key={link.name} className={styles.socialLink} target="_blank">
@@ -34,25 +32,17 @@ export default async function Home() {
     </a>
   ));
 
-  const webStack = await fetchLocalJson("web-stack");
-
   const webStackIcons = webStack.map((data, index) => (
     <div id={`${data.title}-${index}-holder`} className={styles.socialLink} key={index}>
       <TravellingIcon key={data.title} iconURL={data.imageURL} iconID={`${data.title}-icon`} shouldInvert={data.invertLogo} travelFromID={`${data.title}-${index}-holder`} travelToID={`${data.title}-stack-member-icon`} travelDuration={0.7} imgAlt={data.title} />
     </div>
   ));
 
-  const webProjects = await fetchLocalJson("web-projects");
-
-  const gameStack = await fetchLocalJson("game-stack");
-
   const gameStackIcons = gameStack.map((data, index) => (
     <div id={`${data.title}-${index}-holder`} className={styles.socialLink} key={index}>
       <TravellingIcon key={data.title} iconURL={data.imageURL} iconID={`${data.title}-icon`} shouldInvert={data.invertLogo} travelFromID={`${data.title}-${index}-holder`} travelToID={`${data.title}-stack-member-icon`} travelDuration={0.7} imgAlt={data.title} />
     </div>
   ));
-
-  const gameProjects = await fetchLocalJson("game-projects");
 
   return (
     <main>
