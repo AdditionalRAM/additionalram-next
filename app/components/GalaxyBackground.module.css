@@ -7,6 +7,12 @@
   overflow: hidden;
 }
 
+.starsLayer1, .starsLayer2, .starsLayer3{
+  /* transition: all 0.2s linear; */
+  position: absolute;
+  overflow: hidden;
+}
+
 .star{
   position: absolute;
   width: 1px;
