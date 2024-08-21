@@ -10,6 +10,22 @@ const nextConfig = {
         pathname: "/**",
       },
     ],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "additionalram.com",
+        port: "",
+        pathname: "/**",
+      },
+    ],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "taha.sener.ai",
+        port: "",
+        pathname: "/**",
+      },
+    ],
   },
 }
 
