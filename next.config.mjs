@@ -9,16 +9,12 @@ const nextConfig = {
         port: "3000",
         pathname: "/**",
       },
-    ],
-    remotePatterns: [
       {
         protocol: "https",
         hostname: "additionalram.com",
         port: "",
         pathname: "/**",
       },
-    ],
-    remotePatterns: [
       {
         protocol: "https",
         hostname: "taha.sener.ai",
