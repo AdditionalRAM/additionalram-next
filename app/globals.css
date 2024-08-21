@@ -7,7 +7,10 @@ body{
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background-color: #020D19;
+  background: linear-gradient(to bottom, #000010, #002040, #000010);
+  background-repeat: repeat-y;
+  background-size: 100% 20%;
+  background-color: #000010;
   color: white;
 }
 

@@ -13,6 +13,7 @@ import ProjectsGrid from "./components/ProjectsGrid";
 import GlitchyText from "./components/GlitchyText";
 import AnimatedParagraph from "./components/AnimatedParagraph";
 import ThreeLoadManager from "./components/ThreeLoadManager";
+import GalaxyBackground from "./components/GalaxyBackground";
 
 const silkscreen = Silkscreen({ subsets: ["latin"], weight: '400' });
 
@@ -55,6 +56,7 @@ export default async function Home() {
 
   return (
     <main>
+      <GalaxyBackground />
       <AccessibleHeading text="AdditionalRAM's Portfolio" level={1} />
       <section id="hero" className={styles.hero}>
         <ThreeLoadManager elementID={"threecrt"} obeyParentContainer={false} />
