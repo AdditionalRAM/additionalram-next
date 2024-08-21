@@ -69,14 +69,14 @@ export default async function Home() {
         <AccessibleHeading text="About Me" level={2} />
         <GlitchyText text="About Me" fontClassName={silkscreen.className} extraClassName={styles.heading} />
         <div className={styles.paragraphHolder}>
-          <AnimatedParagraph>Hey there! I'm Taha.</AnimatedParagraph>
-          <AnimatedParagraph>I'm a self-taught web and game developer based in Berlin, Germany.</AnimatedParagraph>
-          <AnimatedParagraph>I've been actively learning by myself since 2018, but my love for programming started all the way back in primary school.</AnimatedParagraph>
+          <AnimatedParagraph>Hey there! I&apos;m Taha.</AnimatedParagraph>
+          <AnimatedParagraph>I&apos;m a self-taught web and game developer based in Berlin, Germany.</AnimatedParagraph>
+          <AnimatedParagraph>I&apos;ve been actively learning by myself since 2018, but my love for programming started all the way back in primary school.</AnimatedParagraph>
           <AnimatedParagraph>In February 2023, I had the incredible opportunity to intern for two weeks at <a className={styles.paragraphLink} href="https://foodforthoughtmedia.com/" target="_blank">Food for Thought Media</a> & <a className={styles.paragraphLink} href="https://madaboutpandas.de/" target="_blank">Mad About Pandas</a>.</AnimatedParagraph>
           <AnimatedParagraph>During this internship, I was able to demonstrate my skills in game development with state machines in Unity and C# and learn a lot about the game design process.</AnimatedParagraph>
           <AnimatedParagraph>It was also there that I discovered my passion for web development after working on a web-based game.</AnimatedParagraph>
-          <AnimatedParagraph>This internship is not the only thing I've been doing.</AnimatedParagraph>
-          <AnimatedParagraph>Scroll down to see what technologies I've learned by myself and the projects I've put them to use in!</AnimatedParagraph>
+          <AnimatedParagraph>This internship is not the only thing I&apos;ve been doing.</AnimatedParagraph>
+          <AnimatedParagraph>Scroll down to see what technologies I&apos;ve learned by myself and the projects I&apos;ve put them to use in!</AnimatedParagraph>
           <AnimatedParagraph>Contact me at:</AnimatedParagraph>
         </div>
         <div className={styles.smLinksHolder}>
@@ -118,7 +118,7 @@ export default async function Home() {
           <AnimatedParagraph>Email: semih@sener.ai</AnimatedParagraph>
           <AnimatedParagraph>Registration: District Court Charlottenburg HRB 249792B</AnimatedParagraph>
           <AnimatedParagraph>VAT ID: DE 36 0 36 10 40</AnimatedParagraph>
-          <AnimatedParagraph>This page doesn't collect any user data or use cookies. All copyrighted logos and trademarks belong to their respective owners. "AdditionalRAM" is the username / alias Ekrem Taha SENER goes by and is not a trademark.</AnimatedParagraph>
+          <AnimatedParagraph>This page doesn&apos;t collect any user data or use cookies. All copyrighted logos and trademarks belong to their respective owners. &quot;AdditionalRAM&quot; is the username / alias Ekrem Taha SENER goes by and is not a trademark.</AnimatedParagraph>
 
         </div>
       </section>
