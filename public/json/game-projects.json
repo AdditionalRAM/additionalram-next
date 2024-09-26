@@ -35,6 +35,37 @@
     }
   },
   {
+    "title": "Power Supply",
+    "description": "Help Alkaline the Robot fulfill his purpose by guiding him to the power generator. But the weather isn't the clearest it's ever been, and Alkaline isn't exactly waterproof. For a long time, me and a good friend have been dreaming of creating a game together, so we decided to take the opportunity and make an entry for the Brackeys Game Jam 2024.2. The theme was \"Calm before the storm\". My friend Yonat made the art and game design while I did the programming.",
+    "techStack": ["Unity", "C#", "Aseprite", "DOTween"],
+    "keyFeatures": [
+      "Platformer controls: The game features tight platformer controls inspired by the original Super Mario Bros. with tight jumps and a sense of weight.",
+      "The Storm: Within each level, the player has a limited amount of time before the storm arrives. Once it does, Alkaline will start to malfunction, freaking out and moving uncontrollably, so the player needs to go to a safe place before this happens.",
+      "Room based logic: The game is divided into rooms, each with their own unique challenges and puzzles to solve, and proper resetting logic."
+    ],
+    "dateCreated": "September 2024",
+    "status": "Finished",
+    "statusIconURL": "/icons/checkmark-circle-outline.svg",
+    "statusIconInvert": true,
+    "improvements": [
+      "A huge bug with ground checking logic makes the player get stuck at the edge of platforms sometimes and get softlocked. Using the respawn button is the only fix.",
+      "Due to the lack of playtesting, the difficulty is a bit too high for some.",
+      "Other minor issues exist such as visual bugs that are simply a result of the one week time constraint."
+    ],
+    "platforms": ["WebGL"],
+    "thumbnailImageURL": "/images/power-supply/thumbnail.webp",
+    "imageURLs": [
+      "/images/power-supply/screenshot-0.webp",
+      "/images/power-supply/screenshot-1.webp",
+      "/images/power-supply/screenshot-2.webp"
+    ],
+    "externalLinks": {
+      "sourceCode": null,
+      "liveDemo": "https://additionalram.itch.io/power-supply",
+      "download": null
+    }
+  },
+  {
     "title": "Five Periods at Timeler's",
     "description": "An Undertale-style turn based fight against a character based on my maths and physics teacher. Mr Timeler, as we call him, is a massive meme in our school. I wanted to make an Undertale fight in Unity and stumbled upon 'Kahoot! OST - Megalovania' on YouTube, which I thought would be a perfect fight theme for Mr Timeler. It is filled with inside jokes, such as Mr Timeler attacking you with Tesla logos since he's a huge fan of Tesla and Elon Musk and can't stop talking about them in class.",
     "techStack": ["Unity", "C#", "Aseprite"],
