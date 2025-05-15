@@ -7,6 +7,22 @@ import { Silkscreen } from "next/font/google";
 
 const silkscreen = Silkscreen({ subsets: ["latin"], weight: '400' });
 
+function getProjectExternalLinks(project) {
+  const links = [];
+  for (const [key, value] of Object.entries(project.externalLinks)) {
+    if (value) {
+      links.push(
+        <a href={value} target="_blank" rel="noreferrer" className={styles.link} key={key}>
+          <img src="/icons/arrow-forward-outline.svg" alt="" className={`${styles.linkIcon}`} />
+          <p className={`${styles.linkText} ${styles.initial} ${silkscreen.className}`}>{key.replace(/([A-Z])/g, ' $1').trim()}</p>
+          <p className={`${styles.linkText} ${styles.hidden} ${silkscreen.className}`}>{key.replace(/([A-Z])/g, ' $1').trim()}</p>
+        </a>
+      );
+    }
+  }
+  return links;
+}
+
 export default function ProjectModal({ show, project, onClose }) {
   let formattedTitle = project.title.replace(/\./g, "\u200B.");
   let modalContentRef = useRef(null);
@@ -47,6 +63,9 @@ export default function ProjectModal({ show, project, onClose }) {
     <div className={`${styles.modalBackdrop} ${show ? "" : styles.hidden}`} onClick={handleBackdropClick} ref={modalBackdropRef}>
       <button className={styles.modalClose} onClick={onClose}><img src="/icons/close-outline.svg" alt="Close" /></button>
       <div className={styles.modalContent} ref={modalContentRef}>
+        <div className={styles.linksHolder}>
+          {getProjectExternalLinks(project)}
+        </div>
         <div className={styles.verticalSectionHolder}>
           <div className={`${styles.verticalSection} ${styles.imageAndStackHolder}`}>
             <div className={styles.modalImageHolder}>
@@ -94,29 +113,6 @@ export default function ProjectModal({ show, project, onClose }) {
               <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}${image}`} alt={`${project.title} Image ${index + 1}`} fill className={styles.individualImage} sizes="(max-width: 768px) 70vw, 37.5vw" />
             </div>
           ))}
-        </div>
-        <div className={styles.linksHolder}>
-          {project.externalLinks.sourceCode ? (
-            <a href={project.externalLinks.sourceCode} target="_blank" rel="noreferrer" className={styles.link}>
-              <img src="/icons/arrow-forward-outline.svg" alt="" className={`${styles.linkIcon}`} />
-              <p className={`${styles.linkText} ${styles.initial} ${silkscreen.className}`}>Source Code</p>
-              <p className={`${styles.linkText} ${styles.hidden} ${silkscreen.className}`}>Source Code</p>
-            </a>
-          ) : (<></>)}
-          {project.externalLinks.liveDemo ? (
-            <a href={project.externalLinks.liveDemo} target="_blank" rel="noreferrer" className={styles.link}>
-              <img src="/icons/arrow-forward-outline.svg" alt="" className={`${styles.linkIcon}`} />
-              <p className={`${styles.linkText} ${styles.initial} ${silkscreen.className}`}>Live Demo</p>
-              <p className={`${styles.linkText} ${styles.hidden} ${silkscreen.className}`}>Live Demo</p>
-            </a>
-          ) : (<></>)}
-          {project.externalLinks.download ? (
-            <a href={project.externalLinks.download} target="_blank" rel="noreferrer" className={styles.link}>
-              <img src="/icons/arrow-forward-outline.svg" alt="" className={`${styles.linkIcon}`} />
-              <p className={`${styles.linkText} ${styles.initial} ${silkscreen.className}`}>Download</p>
-              <p className={`${styles.linkText} ${styles.hidden} ${silkscreen.className}`}>Download</p>
-            </a>
-          ) : (<></>)}
         </div>
       </div>
     </div>

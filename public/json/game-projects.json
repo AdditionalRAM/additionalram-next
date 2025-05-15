@@ -1,5 +1,38 @@
 [
   {
+    "title": "EMBER RUIN",
+    "description": "A platformer game that is designed around the limited controls of mobile devices, heavily inspired by the movement of Celeste.",
+    "techStack": ["Unity", "C#", "Scriptable Objects", "JSON", "DOTween"],
+    "keyFeatures": [
+      "Tight, mobile optimized controls: The controls have been designed from the ground up to be responsive and feel good to play on mobile devices. The moves include dashes and \"dash jumps\", a system which is rewarding to learn and master.",
+      "Endless level generation: The game generates levels randomly using premade prefabs. The game continues until the player loses all their lives.",
+      "Power ups: The game features powerups that can be bought from the in-game shop to help the player during their run. The power ups can also be upgraded in the main menu."
+    ],
+    "dateCreated": "December 2024",
+    "status": "Work in progress",
+    "statusIconURL": "/icons/hourglass-outline.svg",
+    "statusIconInvert": true,
+    "improvements": [
+      "Some players consider the controls to be too difficult. A tutorial level has been added, but it is not enough for some.",
+      "The power ups are too useless in their current state and mostly not worth buying.",
+      "Loading screens and a splash screen could be added.",
+      "Due to the lack of variation in the levels, the game can get repetitive. This will be fixed futher down the line.",
+      "Due to the early state of development, many features are missing, such as leaderboards, achievements, custom skins and a level editor."
+    ],
+    "platforms": ["Android", "iOS"],
+    "thumbnailImageURL": "/images/ember-ruin/thumbnail.webp",
+    "imageURLs": [
+      "/images/ember-ruin/screenshot-1.webp",
+      "/images/ember-ruin/screenshot-2.webp",
+      "/images/ember-ruin/screenshot-3.webp"
+    ],
+    "externalLinks": {
+      "testflight": "https://testflight.apple.com/join/qcfsd457",
+      "itch.io": "https://additionalram.itch.io/ember-ruin",
+      "discord": "https://discord.com/invite/BBGZv4DPQN"
+    }
+  },
+  {
     "title": "Mini World Adventures",
     "description": "A quite traditional action-adventure game with a nice story. The game is heavily inspired by classics such as The Legend of Zelda. When I first started learning Unity, I followed a guide by Mister Taft Creates to create a 'zeldalike' game. After I learnt more and gained experience, I decided to revisit the concept and start from scratch making a similar game with a proper story and level design.",
     "techStack": ["Unity", "C#", "Aseprite", "Scriptable Objects", "JSON", "DOTween"],

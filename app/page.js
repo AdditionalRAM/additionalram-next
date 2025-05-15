@@ -55,9 +55,14 @@ export default async function Home() {
         <GlitchyText text="AdditionalRAM" fontClassName={silkscreen.className} />
         <GlitchyText text="Web and Game Developer" fontClassName={silkscreen.className} extraClassName={styles.bottomTitle} />
       </section>
+      <section id="ember-ruin">
+        <AccessibleHeading text="Check out my game!" level={2} />
+        <GlitchyText text="CHECK OUT MY GAME" fontClassName={silkscreen.className} extraClassName={styles.heading} />
+        <ProjectsGrid projects={[gameProjects[0]]} elementID="ember-ruin-grid" />
+      </section>
       <section id="about">
         <AccessibleHeading text="About Me" level={2} />
-        <GlitchyText text="About Me" fontClassName={silkscreen.className} extraClassName={styles.heading} />
+        <GlitchyText text="About Me" fontClassName={silkscreen.className} />
         <div className={styles.paragraphHolder}>
           <AnimatedParagraph>Hey there! I&apos;m Taha.</AnimatedParagraph>
           <AnimatedParagraph>I&apos;m a self-taught web and game developer based in Berlin, Germany.</AnimatedParagraph>
@@ -73,17 +78,6 @@ export default async function Home() {
           {smIcons}
         </div>
       </section>
-      <section id="web-development">
-        <OrbittingText iconURL="/icons/globe.svg" textToRotate="WEB-DEVELOPMENT-" rotateSpeed={10} elementID="web-development-orbit" />
-        <RotatingIcons elements={webStackIcons} centerSelector="#web-development-orbit" radiusVW={20} smallScreenRadiusVW={40}  speed={10} iconClass="webDevOrbit" uniqueID="webdev" />
-        <AccessibleHeading text="Web Development" level={1} />
-        <AccessibleHeading text="My Skills" level={2} />
-        <GlitchyText text="My Skills" fontClassName={silkscreen.className} extraClassName={styles.heading} />
-        <TechStack dataset={webStack} />
-        <AccessibleHeading text="My Projects" level={2} />
-        <GlitchyText text="My Projects" fontClassName={silkscreen.className} extraClassName={styles.heading} />
-        <ProjectsGrid projects={webProjects} elementID="web-projects-grid" />
-      </section>
       <section id="game-development" className={styles.spaceTop}>
         <OrbittingText iconURL="/icons/game-controller.svg" textToRotate="GAME-DEVELOPMENT-" rotateSpeed={10} elementID="game-development-orbit" />
         <AccessibleHeading text="Game Development" level={1} />
@@ -95,6 +89,17 @@ export default async function Home() {
         <GlitchyText text="My Projects" fontClassName={silkscreen.className} extraClassName={styles.heading} />
         <ProjectsGrid projects={gameProjects} elementID="game-projects-grid" />
       </section>
+      <section id="web-development">
+        <OrbittingText iconURL="/icons/globe.svg" textToRotate="WEB-DEVELOPMENT-" rotateSpeed={10} elementID="web-development-orbit" />
+        <RotatingIcons elements={webStackIcons} centerSelector="#web-development-orbit" radiusVW={20} smallScreenRadiusVW={40}  speed={10} iconClass="webDevOrbit" uniqueID="webdev" />
+        <AccessibleHeading text="Web Development" level={1} />
+        <AccessibleHeading text="My Skills" level={2} />
+        <GlitchyText text="My Skills" fontClassName={silkscreen.className} extraClassName={styles.heading} />
+        <TechStack dataset={webStack} />
+        <AccessibleHeading text="My Projects" level={2} />
+        <GlitchyText text="My Projects" fontClassName={silkscreen.className} extraClassName={styles.heading} />
+        <ProjectsGrid projects={webProjects} elementID="web-projects-grid" />
+      </section>
       <section id="imprint" className={styles.spaceTop}>
         <AccessibleHeading text="Impressum" level={1} />
         <GlitchyText text="IMPRESSUM AND LEGAL STUFF" fontClassName={silkscreen.className} />
@@ -105,7 +110,7 @@ export default async function Home() {
           <AnimatedParagraph>Sener Engineering GmbH</AnimatedParagraph>
           <AnimatedParagraph>c/o Next Level Offices, Franklinstraße 11, 10587 Berlin</AnimatedParagraph>
           <AnimatedParagraph>Managing Director: BSc (Ing.) Semih SENER</AnimatedParagraph>
-          <AnimatedParagraph>Email: semih@sener.ai</AnimatedParagraph>
+          <AnimatedParagraph>Contact: taha@sener.ai</AnimatedParagraph>
           <AnimatedParagraph>Registration: District Court Charlottenburg HRB 249792B</AnimatedParagraph>
           <AnimatedParagraph>VAT ID: DE 36 0 36 10 40</AnimatedParagraph>
           <AnimatedParagraph>This page doesn&apos;t collect any user data or use cookies. All copyrighted logos and trademarks belong to their respective owners. &quot;AdditionalRAM&quot; is the username / alias Ekrem Taha SENER goes by and is not a trademark.</AnimatedParagraph>
