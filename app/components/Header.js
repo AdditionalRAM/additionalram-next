@@ -15,7 +15,7 @@ const silkscreen = Silkscreen({ subsets: ["latin"], weight: "400" });
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(false);
-  const [crtSize, setCrtSize] = useState(8);
+  const [crtSize, setCrtSize] = useState(7);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,26 +36,56 @@ export default function Header() {
     const headerHeight = document.querySelector("header")?.offsetHeight || 0;
 
     const handleSmoothScroll = (event) => {
-      event.preventDefault();
-      const targetId = event.currentTarget.getAttribute("href");
-      const targetElement = document.querySelector(targetId);
+      const href = event.currentTarget.getAttribute("href");
+      const url = new URL(href, window.location.origin);
+      const targetId = url.hash;
+      const targetPath = url.pathname;
+      const currentPath = window.location.pathname;
 
-      if (targetElement) {
-        gsap.to(window, {
-          scrollTo: {
-            y: targetElement.offsetTop - headerHeight,
-            offsetY: headerHeight * 1.3,
-          },
-          duration: 0.4,
-          ease: "power2.inOut", // easing
-        });
+      // If navigating to a different page, let the browser handle it
+      if (targetPath !== currentPath) {
+        return; // Don't prevent default, allow normal navigation
+      }
+
+      // Same page, smooth scroll to target
+      if (targetId) {
+        event.preventDefault();
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          gsap.to(window, {
+            scrollTo: {
+              y: targetElement.offsetTop - headerHeight,
+              offsetY: headerHeight * 1.3,
+            },
+            duration: 0.4,
+            ease: "power2.inOut",
+          });
+        }
       }
     };
 
-    const links = document.querySelectorAll("nav a[href^='#']");
+    const links = document.querySelectorAll("nav a, #header-main-link");
     links.forEach((link) => {
       link.addEventListener("click", handleSmoothScroll);
     });
+
+    // Handle hash on page load (for direct navigation or page refresh)
+    if (window.location.hash) {
+      const targetElement = document.querySelector(window.location.hash);
+      if (targetElement) {
+        setTimeout(() => {
+          gsap.to(window, {
+            scrollTo: {
+              y: targetElement.offsetTop - headerHeight,
+              offsetY: headerHeight * 1.3,
+            },
+            duration: 0.4,
+            ease: "power2.inOut",
+          });
+        }, 100);
+      }
+    }
 
     return () => {
       links.forEach((link) => {
@@ -66,10 +96,12 @@ export default function Header() {
 
   useEffect(() => {
     const handleResize = () => {
-      const screenWidth = window.innerWidth;
+      setTimeout(() => {
+        const screenWidth = window.innerWidth;
 
-      let newCrtSize = screenWidth < 800 ? 16 : 8;
-      setCrtSize(newCrtSize);
+        let newCrtSize = screenWidth < 800 ? 16 : 7;
+        setCrtSize(newCrtSize);
+      },300);
     }
 
     window.addEventListener("resize", handleResize);
@@ -79,20 +111,26 @@ export default function Header() {
 
   return (
     <header className={`${styles.header} ${!isVisible ? styles.hide : ""}`} id="header">
-      <nav className={styles.nav}>
-        <a href="#hero" className={styles.crtHolder} id="header-crt-holder">
+      <a href="/#hero" className={`${styles.mainLink}`} id="header-main-link">
+        <div className={styles.crtHolder}>
           <ThreeCRT elementID="header-crt" obeyParentContainer={true} crtSize={crtSize} />
+        </div>
+        <span className={`${silkscreen.className}`}>AdditionalRAM</span>
+      </a>
+      <nav className={styles.nav}>
+        <a href="/emberruin" className={`${silkscreen.className} ${styles.navLink}`}>
+          EMBER RUIN
         </a>
-        <a href="#about" className={`${silkscreen.className} ${styles.navLink}`}>
+        <a href="/#about" className={`${silkscreen.className} ${styles.navLink}`}>
           About
         </a>
-        <a href="#web-development" className={`${silkscreen.className} ${styles.navLink}`}>
-          Web
+        <a href="/#game-development" className={`${silkscreen.className} ${styles.navLink}`}>
+          Gamedev
         </a>
-        <a href="#game-development" className={`${silkscreen.className} ${styles.navLink}`}>
-          Game
+        <a href="/#web-development" className={`${silkscreen.className} ${styles.navLink}`}>
+          Webdev
         </a>
-        <a href="#imprint" className={`${silkscreen.className} ${styles.navLink}`}>
+        <a href="/#imprint" className={`${silkscreen.className} ${styles.navLink}`}>
           Imprint
         </a>
       </nav>
