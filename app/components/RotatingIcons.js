@@ -33,8 +33,10 @@ export default function RotatingIcons({ elements, centerSelector, radiusVW, smal
     updateRadiusPx();
     updateCenterPosition(); // Ensure centerPos is updated
     window.addEventListener('resize', () => {
-      updateRadiusPx();
-      updateCenterPosition();
+      setTimeout(() => {
+        updateRadiusPx();
+        updateCenterPosition();
+      }, 300);
     });
 
     rotateAnimationRef.current = gsap.to(`#${uniqueID}-container`, {

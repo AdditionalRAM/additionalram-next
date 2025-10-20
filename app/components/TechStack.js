@@ -3,7 +3,7 @@ import StackMember from "./StackMember";
 
 export default function TechStack({dataset}){
   return(
-    <div>
+    <div style={{"height": (dataset.length - 1) * 3 + 12 + "em"}}>
       {dataset.map((data, index) => (
         <StackMember key={index} title={data.title} description={data.description} learntAt={data.learntAt} 
         memberID={`${data.title}-stack-member`}
