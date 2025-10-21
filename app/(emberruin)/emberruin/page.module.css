@@ -13,7 +13,7 @@
     left: 0;
     width: 100vw;
     min-height: 100vh;
-    background: radial-gradient(circle at center, #5e3b15 20%, #100000 80%);
+    background: radial-gradient(circle at center, #5e3b15 30%, #100000 80%);
     background-size: 100% 100vh;
     background-repeat: repeat-y;
     z-index: -100;
@@ -219,4 +219,21 @@
     font-size: 1.2em;
     color: #d4a547;
     font-style: italic;
+}
+
+.screenshotContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    margin: 2vh 0;
+}
+
+.screenshot{
+    width: min(300px, 20vw);
+    height: auto;
+    border: 5px solid #ba923b;
+    border-radius: 3em;
+    box-shadow: 0 0 15px rgba(186, 146, 59, 0.6);
 }

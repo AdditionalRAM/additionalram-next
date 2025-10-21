@@ -68,13 +68,15 @@ export default function EmberRuin() {
           </p>
           <p className={styles.sectionParagraph}>So, I decided to come up with a solution.</p>
         </div>
+                <div className={styles.screenshotContainer}>
+            <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}/images/ember-ruin/screenshot-1.webp`} alt="Ember Ruin Gameplay Screenshot" width={1179 / 2} height={2556 / 2} className={styles.screenshot} />
+            <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}/images/ember-ruin/screenshot-2.webp`} alt="Ember Ruin Gameplay Screenshot" width={1179 / 2} height={2556 / 2} className={styles.screenshot} />
+            <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}/images/ember-ruin/screenshot-3.webp`} alt="Ember Ruin Gameplay Screenshot" width={1179 / 2} height={2556 / 2} className={styles.screenshot} />
+        </div>
       </section>
 
       {/* ===== Section: Gameplay ===== */}
       <section className={styles.splitSection} id="gameplay">
-        <div className={styles.mediaHolder}>
-          <video src={`${process.env.NEXT_PUBLIC_BASE_URL}/videos/emberruin_gameplay.mp4`} autoPlay muted loop playsInline className={styles.gameplayVideo}></video>
-        </div>
         <div className={styles.sectionTextContent}>
           <h2 className={`${styles.sectionHeading} ${patrickHand.className}`}>Gameplay</h2>
           <p className={styles.sectionParagraph}>
@@ -87,6 +89,11 @@ export default function EmberRuin() {
             Each run is built from handcrafted segments that blend seamlessly through procedural generation, creating endless journeys upward through <em>The Depths</em>.
           </p>
           <p className={styles.sectionParagraph}>Climb higher, master every movement, and fight for your spot on the <strong>leaderboards</strong>.</p>
+        </div>
+        <div className={styles.screenshotContainer}>
+            <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}/images/ember-ruin/screenshot-4.webp`} alt="Ember Ruin Gameplay Screenshot" width={1179 / 2} height={2556 / 2} className={styles.screenshot} />
+            <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}/images/ember-ruin/screenshot-5.webp`} alt="Ember Ruin Gameplay Screenshot" width={1179 / 2} height={2556 / 2} className={styles.screenshot} />
+            <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}/images/ember-ruin/screenshot-6.webp`} alt="Ember Ruin Gameplay Screenshot" width={1179 / 2} height={2556 / 2} className={styles.screenshot} />
         </div>
       </section>
 
