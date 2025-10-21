@@ -29,18 +29,18 @@ export default function EmberRuin() {
 
           {/* CTA Buttons */}
           <div className={styles.buttonsHolder}>
-            <div className={styles.buttonsRow1}>
+            <div className={styles.buttonsRow}>
               <a href="https://discord.com/invite/BBGZv4DPQN" target="_blank" rel="noopener noreferrer" className={`${styles.stylizedLink} ${patrickHand.className}`}>
                 <FaDiscord /> JOIN THE DISCORD
               </a>
             </div>
             <p className={styles.buttonsSubtitle}>Version 0.6.2 available to playtest now on</p>
-            <div className={styles.buttonsRow2}>
-              <a href="https://play.google.com/store/apps/details?id=com.AdditionalRAM.EmberRuin" target="_blank" rel="noopener noreferrer" className={`${styles.stylizedLink} ${patrickHand.className}`}>
-                <FaGooglePlay /> PLAY STORE
-              </a>
+            <div className={styles.buttonsRow}>
               <a href="https://testflight.apple.com/join/qcfsd457" target="_blank" rel="noopener noreferrer" className={`${styles.stylizedLink} ${patrickHand.className}`}>
                 <FaAppStore /> TESTFLIGHT
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.AdditionalRAM.EmberRuin" target="_blank" rel="noopener noreferrer" className={`${styles.stylizedLink} ${patrickHand.className}`}>
+                <FaGooglePlay /> PLAY STORE
               </a>
             </div>
             <p className={styles.buttonsSubtitle}>You need to be added to the testing group on Discord to access the Play Store version</p>
@@ -76,7 +76,7 @@ export default function EmberRuin() {
       </section>
 
       {/* ===== Section: Gameplay ===== */}
-      <section className={styles.splitSection} id="gameplay">
+      <section className={styles.textSection} id="gameplay">
         <div className={styles.sectionTextContent}>
           <h2 className={`${styles.sectionHeading} ${patrickHand.className}`}>Gameplay</h2>
           <p className={styles.sectionParagraph}>
@@ -98,7 +98,7 @@ export default function EmberRuin() {
       </section>
 
       {/* ===== Section: Story ===== */}
-      <section className={styles.fullWidthSection} id="story">
+      <section className={styles.textSection} id="story">
         <div className={styles.storyOverlay}></div>
         <div className={styles.sectionTextContent}>
           <h2 className={`${styles.sectionHeading} ${patrickHand.className}`}>Story</h2>
@@ -133,12 +133,12 @@ export default function EmberRuin() {
         <div className={styles.sectionTextContent}>
           <h2 className={`${styles.sectionHeading} ${patrickHand.className}`}>Join the journey</h2>
           <p className={styles.sectionParagraph}>Want to follow the development and playtest Ember Ruin?</p>
-          <p className={styles.sectionParagraphSmall}>
+          <p className={styles.sectionParagraph}>
             Get updates, devlogs, and sneak peeks. Playtesting and feedback are greatly appreciated.
           </p>
-          <a href="https://discord.com/invite/BBGZv4DPQN" target="_blank" rel="noopener noreferrer" className={`${styles.stylizedLink} ${patrickHand.className}`}>
+          <div className={styles.buttonsRow}><a href="https://discord.com/invite/BBGZv4DPQN" target="_blank" rel="noopener noreferrer" className={`${styles.stylizedLink} ${patrickHand.className}`}>
             <FaDiscord /> JOIN THE DISCORD
-          </a>
+          </a></div>
         </div>
       </section>
 

@@ -102,19 +102,23 @@
     top: 1em;
   }
   .crtHolder{
-    width: 6em;
+    width: 4em;
     height: 4em;
     /* margin: 0 calc(calc(100vw - 6em) / 2); */
     overflow: visible;
   }
   .mainLink{
-    width: 8em;
+    width: fit-content;
+    margin-right: 0;
   }
   .nav{
     width: 60%;
   }
   /* hide all navlinks except first one */
   .navLink:not(:first-of-type){
+    display: none;
+  }
+  .mainLink span{
     display: none;
   }
 }

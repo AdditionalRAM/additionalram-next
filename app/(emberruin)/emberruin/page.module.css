@@ -167,9 +167,13 @@
 
 .buttonsHolder{
     margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.buttonsRow1, .buttonsRow2{
+.buttonsRow{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -236,4 +240,51 @@
     border: 5px solid #ba923b;
     border-radius: 3em;
     box-shadow: 0 0 15px rgba(186, 146, 59, 0.6);
+}
+
+@media (max-width: 800px) {
+    .hero{
+        flex-direction: column;
+        gap: 2vh;
+    }
+    .videoHolder{
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+    .buttonsRow{
+        flex-direction: column;
+        width: 90%;
+    }
+    .buttonsSubtitle{
+        max-width: 70vw;
+    }
+    .textSection{
+        overflow-x: hidden;
+    }
+    .sectionTextContent{
+        align-items: center;
+    }
+    .sectionParagraph{
+        text-align: center;
+    }
+    .sectionHeading
+    {
+        text-align: center;
+    }
+    .screenshotContainer{
+        flex-direction: row; 
+        overflow-x: scroll;
+        justify-content: flex-start;
+    }
+    .screenshot{
+        width: 70vw;
+    }
+    .logo{
+        width: 100%;
+        height: auto;
+    }
+    .stylizedLink{
+        width: 100%;
+    }
 }
