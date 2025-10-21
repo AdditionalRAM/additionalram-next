@@ -45,7 +45,7 @@ export default async function Home() {
   ));
 
   return (
-    <main>
+    <main className={styles.gradientBackground} style={{overflow: "hidden"}}>
       <GalaxyBackground />
       <AccessibleHeading text="AdditionalRAM's Portfolio" level={1} />
       <section id="hero" className={styles.hero}>

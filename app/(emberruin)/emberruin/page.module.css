@@ -1,0 +1,222 @@
+/* .gradientBackground{
+    position: relative;
+    background: radial-gradient(circle, #5e3b15, #100000);
+    background-size: 100% 100vh;
+    background-repeat: repeat-y;
+    min-height: 100vh;
+} */
+
+.gradientBackground::before{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background: radial-gradient(circle at center, #5e3b15 20%, #100000 80%);
+    background-size: 100% 100vh;
+    background-repeat: repeat-y;
+    z-index: -100;
+}
+
+.gradientBackground{
+    overflow-y: hidden;
+    height: auto;
+}
+
+.logoHolder{
+    margin: 0 auto;
+    margin-top: 2vh;
+    text-align: center;
+    width: min(400px, 90vw);
+}
+
+.logoDev{
+    font-size: 0.8rem;
+    color: #00FF41;
+    margin: 0;
+}
+
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lowerRock{
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: min(100vw, 512px);
+    height: auto;
+    z-index: -10;
+
+}
+
+.upperLeftRock{
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: min(100vw, 512px);
+    height: auto;
+    z-index: -10;
+
+}
+
+.upperRightRock{
+    top: 0;
+    right: 0;
+    position: fixed;
+    width: min(100vw, 512px);
+    height: auto;
+    z-index: -10;
+}
+
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+}
+
+.videoHolder{
+    height: 80%;
+    aspect-ratio: 1/1;
+}
+
+.stylizedLink{
+    text-decoration: none;
+    color: white;
+    font-size: 2em;
+    text-transform: uppercase;
+    background-color: #5f2e13;
+    border: 5px solid #ba923b;
+    padding: 0 .5em;
+    border-radius: .5em;
+    margin: 0;
+    
+    /* Black borders around outlines and between elements */
+    outline: 1px solid black;
+    outline-offset: -8px;
+    box-shadow: 
+        /* Inner shadow on the wooden part */
+        inset 0 4px 8px rgba(0, 0, 0, 0.4),
+        inset 0 -4px 8px rgba(0, 0, 0, 0.3),
+        /* Black border effect between frame and inner area */
+        inset 0 0 0 3px black;
+    
+    /* Wood-like texture using background patterns */
+    background-image: 
+        /* Wood grain lines */
+        repeating-linear-gradient(
+            135deg,
+            transparent,
+            transparent 20px,
+            rgba(0, 0, 0, 0.1) 20px,
+            rgba(0, 0, 0, 0.1) 22px
+        ),
+        /* Subtle noise texture */
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.05) 0%,
+            transparent 50%,
+            rgba(0, 0, 0, 0.05) 100%
+        );
+
+    text-shadow: 1px 1px 2px black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    background-color: #5f2e13;
+    position: relative;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.stylizedLink svg {
+    vertical-align: middle;
+    height: 1em;
+    width: 1em;
+    margin-right: 0.3em;
+    /* drop shadow */
+    filter: drop-shadow(1px 1px 2px black);
+}
+
+.stylizedLink:hover {
+    background-color: #6e3617;
+    border-color: #d4a547;
+    box-shadow: 
+        /* Maintain inner shadows */
+        inset 0 4px 8px rgba(0, 0, 0, 0.4),
+        inset 0 -4px 8px rgba(0, 0, 0, 0.3),
+        inset 0 0 0 3px black,
+        /* Add outer glow */
+        0 0 10px rgba(186, 146, 59, 0.6);
+    transform: scale(1.05);
+}
+
+/* Active/pressed effect */
+.stylizedLink:active {
+    transform: translateY(1px);
+    box-shadow: 
+        inset 0 6px 10px rgba(0, 0, 0, 0.5),
+        inset 0 -2px 5px rgba(0, 0, 0, 0.3),
+        inset 0 0 0 3px black;
+}
+
+.buttonsHolder{
+    margin-top: 5vh;
+}
+
+.buttonsRow1, .buttonsRow2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0.5em;
+    gap: 1em;
+}
+
+.buttonsSubtitle{
+    text-align: center;
+    color: #CCCCCC;
+    font-size: 0.9em;
+    margin: 0;
+    width: 100%;
+}
+
+.textSection{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.sectionTextContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 0 2vw;
+}
+
+.sectionParagraph{
+    font-size: 1.2em;
+    text-align: left;
+}
+
+.sectionHeading{
+    font-size: 2em;
+    color: #d4a547;
+    margin-bottom: 0.2em;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.important{
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #d4a547;
+    font-style: italic;
+}

@@ -88,6 +88,25 @@ a.socialLink:hover img {
   flex-wrap: wrap;
 }
 
+.gradientBackground::before{
+  position: relative;
+  background: repeating-linear-gradient(
+    135deg,
+    #001020 0vh,
+    #003060 100vh,
+    #001020 200vh
+  );
+  background-color: #000010;
+  z-index: -100;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 300vh;
+  opacity: 0.7;
+}
+
 @media (max-width: 800px){
   .socialLink{
     width: 2em;

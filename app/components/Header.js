@@ -19,7 +19,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      let desiredScrollHeight = window.innerHeight * 0.8;
+      let desiredScrollHeight = window.innerHeight * 0.05;
       if (window.scrollY >= desiredScrollHeight) {
         setIsVisible(true);
       } else {

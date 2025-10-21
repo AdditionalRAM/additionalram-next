@@ -7,16 +7,26 @@ body{
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background: linear-gradient(to bottom, #000010, #002040, #000010);
+  color: white;
+  background-color: #000010;
+}
+
+/* body.home-page {
+  background: linear-gradient(to bottom, #001020, #003060, #001020);
   background-repeat: repeat-y;
   background-size: 100% 20%;
   background-color: #000010;
-  color: white;
 }
 
-section{
-  min-height: 100vh;
-}
+body.emberruin-page {
+  background: radial-gradient(circle, #5e3b15, #100000);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+} */
+
+
 
 section:not(:first-of-type){
   margin-top: 15vh;
