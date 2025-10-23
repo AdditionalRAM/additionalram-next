@@ -80,7 +80,7 @@
 }
 
 .videoHolder{
-    height: 80%;
+    height: min(480px, 50vh);
     aspect-ratio: 1/1;
 }
 
@@ -96,7 +96,7 @@
     margin: 0;
     
     /* Black borders around outlines and between elements */
-    outline: 1px solid black;
+    /* outline: 1px solid black; */
     outline-offset: -8px;
     box-shadow: 
         /* Inner shadow on the wooden part */
@@ -244,7 +244,7 @@
 
 @media (max-width: 800px) {
     .hero{
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 2vh;
     }
     .videoHolder{

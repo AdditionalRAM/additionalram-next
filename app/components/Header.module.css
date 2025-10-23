@@ -97,9 +97,11 @@
 @media (max-width: 1100px){
   .header{
     height: 5em;
-    left: 1em;
-    right: 1em;
-    top: 1em;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
   .crtHolder{
     width: 4em;

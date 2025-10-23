@@ -48,7 +48,7 @@ export default function EmberRuin() {
         </div>
 
         <div className={styles.videoHolder}>
-          <VideoBackground />
+          <VideoBackground webmLink={`${process.env.NEXT_PUBLIC_BASE_URL}/images/ember-ruin/ember-gameplay.webm`} hevcLink={`${process.env.NEXT_PUBLIC_BASE_URL}/images/ember-ruin/ember-gameplay-hevc.mov`} fallbackImage={`${process.env.NEXT_PUBLIC_BASE_URL}/images/ember-ruin/ember-gameplay-fallback.webp`} />
         </div>
       </section>
 
