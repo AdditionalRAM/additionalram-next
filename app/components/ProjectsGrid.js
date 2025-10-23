@@ -9,13 +9,20 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function ProjectsGrid({ projects, elementID }) {
+export default function ProjectsGrid({ projects, elementID, forceFirstLink = false }) {
   const [showModal, setShowModal] = React.useState(false);
   const [selectedProject, setSelectedProject] = React.useState(projects[0]);
 
   const gridRef = useRef(null);
 
   const onProjectClick = (project) => {
+    if(forceFirstLink && project.externalLinks && Object.keys(project.externalLinks).length > 0) {
+      const firstLinkKey = Object.keys(project.externalLinks)[0];
+      const firstLink = project.externalLinks[firstLinkKey];
+      // redirect in current tab
+      window.location.href = firstLink;
+      return;
+    }
     setSelectedProject(project);
     setShowModal(true);
   }

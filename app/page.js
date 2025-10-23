@@ -58,7 +58,7 @@ export default async function Home() {
       <section id="ember-ruin">
         <AccessibleHeading text="Check out my game!" level={2} />
         <GlitchyText text="CHECK OUT MY GAME" fontClassName={silkscreen.className} extraClassName={styles.heading} />
-        <ProjectsGrid projects={[gameProjects[0]]} elementID="ember-ruin-grid" />
+        <ProjectsGrid projects={[gameProjects[0]]} elementID="ember-ruin-grid" forceFirstLink={true} />
       </section>
       <section id="about">
         <AccessibleHeading text="About Me" level={2} />
