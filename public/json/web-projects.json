@@ -95,36 +95,5 @@
       "liveDemo": "https://pohlarz-ingenieure.de",
       "download": null
     }
-  },
-  {
-    "title": "Project 'Flowdepth'",
-    "description": "This project attempts to solve the massive problem of procrastination that many people my age including myself have been dealing with. I am hopeful this project helps people spend more time productively and actually have fun working.",
-    "techStack": ["Next.js", "CSS Modules", "JavaScript", "Prisma", "PostgreSQL"],
-    "keyFeatures": [
-      "Track how much time you spend productively, similar to 'Focus sessions' on Windows 11. Create separate categories, each with their own timers, settable goals and reminders.",
-      "Social progress: Share your progress with friends to boost dopamine and introduce accountability. If you've been slacking off, the friends you've added will know.",
-      "Collaborate: Create collaborated projects and track the time of many different users to boost productivity in group tasks.",
-      "Cross platform: You improve your productivity on the web, on desktop or mobile."
-    ],
-    "dateCreated": "June 2024",
-    "status": "Early concept",
-    "statusIconURL": "/icons/bulb-outline.svg",
-    "statusIconInvert": true,
-    "improvements": [
-      "The project is very early in development and far from release. Improvements will be pushed as updates as development progresses.",
-      "This project may not start development for a long time due to other commitments in my life."
-    ],
-    "platforms": ["Web"],
-    "thumbnailImageURL": "/images/flowdepth/thumbnail.webp",
-    "imageURLs": [
-      "/images/flowdepth/screenshot-0.webp",
-      "/images/flowdepth/screenshot-1.webp",
-      "/images/flowdepth/screenshot-2.webp"
-    ],
-    "externalLinks": {
-      "sourceCode": null,
-      "liveDemo": null,
-      "download": null
-    }
   }
 ]

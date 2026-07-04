@@ -55,6 +55,11 @@ a.socialLink:hover img {
   align-items: center;
 }
 
+
+.bottomMargin{
+  margin-bottom: 20vh;
+}
+
 .paragraph{
   margin: 0.5em 5vw;
   font-size: 1.1em;

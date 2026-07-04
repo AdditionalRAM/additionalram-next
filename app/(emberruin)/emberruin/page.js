@@ -29,21 +29,20 @@ export default function EmberRuin() {
 
           {/* CTA Buttons */}
           <div className={styles.buttonsHolder}>
-            <div className={styles.buttonsRow}>
+            {/* <div className={styles.buttonsRow}>
               <a href="https://discord.com/invite/BBGZv4DPQN" target="_blank" rel="noopener noreferrer" className={`${styles.stylizedLink} ${patrickHand.className}`}>
                 <FaDiscord /> JOIN THE DISCORD
               </a>
-            </div>
-            <p className={styles.buttonsSubtitle}>Version 0.6.2 available to playtest now on</p>
+            </div> */}
+            <p className={styles.buttonsSubtitle}>Version 0.8.0 available to playtest now on</p>
             <div className={styles.buttonsRow}>
-              <a href="https://testflight.apple.com/join/qcfsd457" target="_blank" rel="noopener noreferrer" className={`${styles.stylizedLink} ${patrickHand.className}`}>
+              {/* <a href="https://testflight.apple.com/join/qcfsd457" target="_blank" rel="noopener noreferrer" className={`${styles.stylizedLink} ${patrickHand.className}`}>
                 <FaAppStore /> TESTFLIGHT
-              </a>
+              </a> */}
               <a href="https://play.google.com/store/apps/details?id=com.AdditionalRAM.EmberRuin" target="_blank" rel="noopener noreferrer" className={`${styles.stylizedLink} ${patrickHand.className}`}>
                 <FaGooglePlay /> PLAY STORE
               </a>
             </div>
-            <p className={styles.buttonsSubtitle}>You need to be added to the testing group on Discord to access the Play Store version</p>
           </div>
         </div>
 
@@ -103,12 +102,8 @@ export default function EmberRuin() {
         <div className={styles.sectionTextContent}>
           <h2 className={`${styles.sectionHeading} ${patrickHand.className}`}>Story</h2>
           <p className={styles.sectionParagraph}>
-            Somewhere in <em>the other world</em>, a little girl wanders through endless, surreal caverns - warm light flickering on the walls, shadows whispering like ghosts.
+            Haha, you really thought? No spoilers!
           </p>
-          <p className={styles.sectionParagraph}>
-            She follows the echoes of forgotten spirits, chasing something she can&apos;t quite name.
-          </p>
-          <p className={styles.sectionParagraph}>Will she discover the truth behind this dream-like world?</p>
         </div>
       </section>
 
@@ -132,13 +127,13 @@ export default function EmberRuin() {
       <section className={styles.textSection} id="join">
         <div className={styles.sectionTextContent}>
           <h2 className={`${styles.sectionHeading} ${patrickHand.className}`}>Join the journey</h2>
-          <p className={styles.sectionParagraph}>Want to follow the development and playtest Ember Ruin?</p>
+          <p className={styles.sectionParagraph}>Want to playtest Ember Ruin?</p>
           <p className={styles.sectionParagraph}>
-            Get updates, devlogs, and sneak peeks. Playtesting and feedback are greatly appreciated.
+            A pre-release version is available now on Google Play. Any and all feedback is very much appreciated! You can submit it through the in-game form.
           </p>
-          <div className={styles.buttonsRow}><a href="https://discord.com/invite/BBGZv4DPQN" target="_blank" rel="noopener noreferrer" className={`${styles.stylizedLink} ${patrickHand.className}`}>
-            <FaDiscord /> JOIN THE DISCORD
-          </a></div>
+          <div className={styles.buttonsRow}><a href="https://play.google.com/store/apps/details?id=com.AdditionalRAM.EmberRuin" target="_blank" rel="noopener noreferrer" className={`${styles.stylizedLink} ${patrickHand.className}`}>
+                <FaGooglePlay /> PLAY STORE
+              </a></div>
         </div>
       </section>
 
