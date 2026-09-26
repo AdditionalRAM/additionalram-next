@@ -56,16 +56,16 @@ export default function EmberRuin() {
         <div className={styles.sectionTextContent}>
           <h2 className={`${styles.sectionHeading} ${patrickHand.className}`}>Virtual D-Pads suck</h2>
           <p className={styles.sectionParagraph}>
-            I&apos;ve always loved tight platformers - like <em>Kaizo Mario</em> or <em>Celeste</em>. In fact, <em>Celeste</em> is the only game I&apos;ve ever gotten all achievements in on Steam.
+            I&apos;ve always loved tight platformers like <em>Kaizo Mario</em> or <em>Celeste</em>. In fact, <em>Celeste</em> is the only game I&apos;ve ever gotten all achievements in on Steam.
           </p>
           <p className={styles.sectionParagraph}>
-            And the D-Pad is <em>vital</em> to the genre. That&apos;s why the SNES controller from 1992 remains a favorite among the best players. That&apos;s also why you&apos;ve <em>never</em> played a good platformer on mobile:
+            And the D-Pad is vital to the genre. That&apos;s why the SNES controller from 1992 remains a favorite among the best players. That&apos;s also why platformers rarely work on mobile:
           </p>
           <p className={`${styles.sectionParagraph} ${styles.important}`}>Virtual D-Pads suck.</p>
           <p className={styles.sectionParagraph}>
-            There&apos;s no haptic feedback. You can&apos;t <em>feel</em> what you&apos;re pressing. Without a precise input device, it&apos;s impossible to control precisely.
+            A touchscreen doesn&apos;t provide tactile feedback, which means you can&apos;t feel what you&apos;re pressing or where your thumb is. This makes precise control difficult, and not in a fun way.
           </p>
-          <p className={styles.sectionParagraph}>So, I decided to come up with a solution.</p>
+          <p className={styles.sectionParagraph}>That is the core problem that this game aims to solve.</p>
         </div>
                 <div className={styles.screenshotContainer}>
             <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}/images/ember-ruin/screenshot-1.webp`} alt="Ember Ruin Gameplay Screenshot" width={1179 / 2} height={2556 / 2} className={styles.screenshot} />
@@ -79,15 +79,18 @@ export default function EmberRuin() {
         <div className={styles.sectionTextContent}>
           <h2 className={`${styles.sectionHeading} ${patrickHand.className}`}>Gameplay</h2>
           <p className={styles.sectionParagraph}>
-            Ember Ruin is a precise and atmospheric platformer built from scratch for touch controls. There&apos;s no walking - you swipe to dash in four directions, and tap once to wall jump.
+            Ember Ruin is a precise platformer built from scratch for touch controls. There&apos;s no walking. You instead swipe to dash in four directions, and tap once to wall jump.
           </p>
           <p className={styles.sectionParagraph}>
-            Every movement is quick, clean and intentional. The result feels as reliable as a classic D-Pad - but designed for your phone touchscreen.
+            The movement system was designed from the ground up around the lack of a D-Pad.
           </p>
           <p className={styles.sectionParagraph}>
-            Each run is built from handcrafted segments that blend seamlessly through procedural generation, creating endless journeys upward through <em>The Depths</em>.
+            You have a limited amount of dashes which requires you to think about when and where to use them. Each dash moves you a discrete distance, which you can cancel or redirect with good enough timing.
           </p>
-          <p className={styles.sectionParagraph}>Climb higher, master every movement, and fight for your spot on the <strong>leaderboards</strong>.</p>
+          <p className={styles.sectionParagraph}>
+            Runs consist of hand crafted rooms in a procedurally generated order, and it gets harder and harder as you progress.
+          </p>
+          <p className={styles.sectionParagraph}>Master the movement, climb ever higher, and fight for your spot on the leaderboards!</p>
         </div>
         <div className={styles.screenshotContainer}>
             <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}/images/ember-ruin/screenshot-4.webp`} alt="Ember Ruin Gameplay Screenshot" width={1179 / 2} height={2556 / 2} className={styles.screenshot} />
@@ -102,7 +105,16 @@ export default function EmberRuin() {
         <div className={styles.sectionTextContent}>
           <h2 className={`${styles.sectionHeading} ${patrickHand.className}`}>Story</h2>
           <p className={styles.sectionParagraph}>
-            Haha, you really thought? No spoilers!
+            Throughout the caves, as you explore, you may stumble upon mysterious ghosts.
+          </p>
+          <p className={styles.sectionParagraph}>
+            What are they saying?
+          </p>
+          <p className={styles.sectionParagraph}>
+            Is it even supposed to make sense?
+          </p>
+          <p className={`${styles.sectionParagraph} ${styles.important}`}>
+            Or are you simply forgetting something important?
           </p>
         </div>
       </section>
@@ -112,13 +124,19 @@ export default function EmberRuin() {
         <div className={styles.sectionTextContent}>
           <h2 className={`${styles.sectionHeading} ${patrickHand.className}`}>Development</h2>
           <p className={styles.sectionParagraph}>
-            Ember Ruin began as a school project: a simple experiment in making mobile controls that feel good.
+            Ember Ruin began development during IT class in high school.
           </p>
           <p className={styles.sectionParagraph}>
-            But it quickly grew into something much more - a full game about precision, atmosphere, and reflection.
+            However, it was never meant to stay a school project.
           </p>
           <p className={styles.sectionParagraph}>
-            I&apos;m building it solo, with help from friends for music and art - with an estimated release in <strong>2026</strong> for Android &amp; iOS.
+            I am the main developer, responsible for the game design and programming. The visuals and music are the amazing work of my good friends Mahmud (Mr.MES) and Emre (ect).
+          </p>
+          <p className={styles.sectionParagraph}>
+            And we hope you enjoy playing it as much as we are enjoying making it.
+          </p>
+          <p className={styles.sectionParagraph}>
+            Estimated release date is somewhere in <strong>late 2026</strong> for Android.
           </p>
         </div>
       </section>

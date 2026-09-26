@@ -1,25 +1,22 @@
 [
   {
     "title": "EMBER RUIN",
-    "description": "A platformer game that is designed around the limited controls of mobile devices, heavily inspired by the movement of Celeste.",
+    "description": "I am somebody who loves precise platformer games like Celeste, especially their fun movement systems. The core idea behind this project was this: How can I make a platformer game with precise movement, that works without precise controls or haptic feedback? This is the result. Alongside my game design and programming efforts, the game includes assets created by my good friends Mahmud (Mr. MES), who drew the visuals by hand, as well as Emre (ect), who composed the soundtrack.",
     "techStack": ["Unity", "C#", "Scriptable Objects", "JSON", "DOTween"],
     "keyFeatures": [
-      "Tight, mobile optimized controls: The controls have been designed from the ground up to be responsive and feel good to play on mobile devices. The moves include dashes and \"dash jumps\", a system which is rewarding to learn and master.",
-      "Endless level generation: The game generates levels randomly using premade prefabs. The game continues until the player loses all their lives.",
-      "Power ups: The game features powerups that can be bought from the in-game shop to help the player during their run. The power ups can also be upgraded in the main menu."
+      "Mobile optimized controls: This is the core mechanic of the game. The main movement consists of dashes that bring the player a distinct distance, as well as a collection of dash canceling mechanics. It was designed this way to feel good with swipe (touch) controls.",
+      "Endless level generation: The game procedurally picks from a pool of hand crafted levels in order to create unique combinations each run. The generation algorithm gradually increases in difficulty and uses the \"squeeze and release\" strategy.",
+      "Power ups: The game features powerups that can be bought from the in-game shop to help the player during their run. The power ups can also be upgraded in the main menu.",
+      "UGS integration: The game integrates with Unity Gaming Services in order to provide cloud saves and leaderboards. Despite this, full offline compatibility is retained."
     ],
     "dateCreated": "December 2024",
     "status": "Work in progress",
     "statusIconURL": "/icons/hourglass-outline.svg",
     "statusIconInvert": true,
     "improvements": [
-      "Some players consider the controls to be too difficult. A tutorial level has been added, but it is not enough for some.",
-      "The power ups are too useless in their current state and mostly not worth buying.",
-      "Loading screens and a splash screen could be added.",
-      "Due to the lack of variation in the levels, the game can get repetitive. This will be fixed futher down the line.",
-      "Due to the early state of development, many features are missing, such as leaderboards, achievements, custom skins and a level editor."
+      "The game is close to the end of the development cycle, however some features may still be unfinished."
     ],
-    "platforms": ["Android", "iOS"],
+    "platforms": ["Android"],
     "thumbnailImageURL": "/images/ember-ruin/thumbnail.webp",
     "imageURLs": [
       "/images/ember-ruin/screenshot-1.webp",
@@ -98,7 +95,7 @@
   },
   {
     "title": "Five Periods at Timeler's",
-    "description": "An Undertale-style turn based fight against a character based on my maths and physics teacher. Mr Timeler, as we call him, is a massive meme in our school. I wanted to make an Undertale fight in Unity and stumbled upon 'Kahoot! OST - Megalovania' on YouTube, which I thought would be a perfect fight theme for Mr Timeler. It is filled with inside jokes, such as Mr Timeler attacking you with Tesla logos since he's a huge fan of Tesla and Elon Musk and can't stop talking about them in class.",
+    "description": "An Undertale-style turn based fight against a character based on my beloved middle and high school maths and physics teacher, who I will be referring to as Mr Timeler. I wanted to make an Undertale fight in Unity and stumbled upon 'Kahoot! OST - Megalovania' on YouTube, which I thought would be a perfect fight theme for him. It is filled with inside jokes from our time with him.",
     "techStack": ["Unity", "C#", "Aseprite"],
     "keyFeatures": [
       "Multiple endings: The game features 6 different endings with different conditions to get them: 'Good Ending', 'Neutral Ending', 'Bad Ending', 'Genocide Ending', 'Mother's Slipper Ending' and 'Ohio Ending'.",
@@ -142,7 +139,7 @@
     "statusIconURL": "/icons/archive-outline.svg",
     "statusIconInvert": true,
     "improvements": [
-      "Matchmaking and player progression could be added to make the game more fun to play long term, as it is not much more than a tech demo in its current state.",
+      "This is nothing more than a prototype in its current state, and it is far from a full, playable game. Therefore I cannot list all of its flaws and missing features here.",
       "Client prediction has to be made a lot more accurate than it currently is. The physics are simulated on the server and on each client. The coins then reconciliate by sliding into the correct position, which can be frustrating if the player had a better position on their client before reconciling.",
       "Certain issues where the camera slides around and can go too far away could be fixed."
     ],
