@@ -100,14 +100,16 @@ export default async function Home() {
         <AccessibleHeading text="Impressum" level={1} />
         <GlitchyText text="IMPRESSUM AND LEGAL STUFF" fontClassName={silkscreen.className} />
         <div className={`${styles.paragraphHolder} ${styles.bottomMargin}`}>
-          <AnimatedParagraph>Website made by Ekrem Taha SENER</AnimatedParagraph>
-          <AnimatedParagraph>This website is a personal portfolio and is not intended for commercial purposes.</AnimatedParagraph>
-          <AnimatedParagraph>Contact:</AnimatedParagraph>
-          <AnimatedParagraph>c/o Sener Engineering GmbH</AnimatedParagraph>
-          <AnimatedParagraph>Bayreuther Str. 4, 10787 Berlin</AnimatedParagraph>
-          <AnimatedParagraph>Email: taha@sener.ai</AnimatedParagraph>
-          <AnimatedParagraph>Phone: +4930233288600</AnimatedParagraph>
-          <AnimatedParagraph>This page doesn&apos;t collect any user data or use cookies. All copyrighted logos and trademarks belong to their respective owners.<br /> &quot;AdditionalRAM&quot; is the username / alias Ekrem Taha SENER goes by and is not a trademark.</AnimatedParagraph>
+          <p className={styles.paragraph}>Website made by Ekrem Taha SENER</p>
+          <p className={styles.paragraph}>This website is a personal portfolio and is not intended for commercial purposes.</p>
+          <p className={styles.paragraph}>Address:</p>
+          <p className={styles.paragraph}>c/o Sener Engineering GmbH</p>
+          <p className={styles.paragraph}>Bayreuther Str. 4, 10787 Berlin, Germany</p>
+          <p className={styles.paragraph}>Email: taha@sener.ai</p>
+          <p className={styles.paragraph}><a href="/contact" className={styles.paragraphLink}>Contact form</a></p>
+          <p className={styles.paragraph}><a href="/tos.html" className={styles.paragraphLink} target="_blank" rel="noopener noreferrer">Terms of Service</a></p>
+          <p className={styles.paragraph}><a href="/privacy.html" className={styles.paragraphLink} target="_blank" rel="noopener noreferrer">Privacy Policy</a></p>
+          <p className={styles.paragraph}>This page doesn&apos;t collect any user data or use cookies. All copyrighted logos and trademarks belong to their respective owners.<br /> &quot;AdditionalRAM&quot; is the username / alias Ekrem Taha SENER goes by and is not a trademark.</p>
         </div>
       </section>
     </main>

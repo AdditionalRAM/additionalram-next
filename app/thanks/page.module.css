@@ -1,0 +1,26 @@
+.thanks {
+  min-height: 60vh;
+  padding-bottom: 35vh;
+}
+
+.homeLink {
+  margin: 2rem 0 0;
+}
+
+.linkInitial {
+  top: 50%;
+}
+
+.linkReplacement {
+  top: 150%;
+}
+
+.homeLink:hover .linkInitial {
+  top: 50%;
+  transform: translateY(-250%);
+}
+
+.homeLink:hover .linkReplacement {
+  top: 50%;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,142 @@
+.contactShell {
+  width: min(900px, 90vw);
+  margin: 0 auto;
+  padding-bottom: 35vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.intro {
+  padding-top: 1rem;
+  width: 100%;
+}
+
+.eyebrow,
+.detailLabel {
+  color: #00FF41;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+}
+
+.eyebrow {
+  margin: 0 0 1.5rem;
+  text-align: center;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 2rem;
+}
+
+.form {
+  width: min(620px, 100%);
+  margin: 0 auto;
+}
+
+.formHeading {
+  margin-bottom: 4rem;
+}
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.field {
+  display: grid;
+  gap: 0.55rem;
+  margin-bottom: 1.35rem;
+}
+
+.field span {
+  color: #00FF41;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
+.field input,
+.field textarea {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.05);
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 0;
+  background: transparent;
+  color: white;
+  font: inherit;
+  padding: 0.75rem 0;
+}
+
+.field textarea {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-bottom-color: #00FF41;
+  box-shadow: 0 1px 0 #00FF41;
+}
+
+.formFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.formFooter p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.sendButton {
+  appearance: none;
+  cursor: pointer;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.buttonInitial {
+  top: 50%;
+}
+
+.buttonReplacement {
+  top: 150%;
+}
+
+.sendButton.sendButton:hover .buttonInitial {
+  top: 50%;
+  transform: translateY(-250%);
+}
+
+.sendButton.sendButton:hover .buttonReplacement {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 760px) {
+  .formFooter {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .sendButton {
+    width: 100%;
+  }
+}
